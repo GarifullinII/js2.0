@@ -184,7 +184,22 @@ document.querySelector('.b-8').onclick = t8;
 // цикл - один
 
 function t9() {
-	
+	let a = +document.querySelector('.i-91').value;
+	let b = +document.querySelector('.i-92').value;
+
+	if (a > b) {
+		let t = a; // start: let a = 8, let b = 1; t = 8 and a = 8;
+		a = b; // a = 1 and b = 1;
+		b = t; // finish: b = 8 and a = 1;
+	}
+
+	let c = '';
+	for (let i = a; i <= b; i++) {
+		c += i + '_'
+	}
+
+	let d = document.querySelector('.out-9');
+	d.innerHTML = c;
 }
 
 document.querySelector('.b-9').onclick = t9;
