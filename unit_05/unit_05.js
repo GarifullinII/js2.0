@@ -225,6 +225,7 @@ function t10() {
 
 document.querySelector('.b-10').onclick = t10;
 
+
 //  Task 11
 // Кнопка .b-11 запускает функцию t11.  Функция должна:
 //     получить все div.div-11 в переменную divs11
@@ -235,6 +236,18 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
+	let divs11 = document.querySelectorAll('.div-11');
+
+	let a = '';
+
+	for (let i = 0; i < divs11.length; i ++) {
+		a += divs11[i].innerHTML + '_';
+	}
+
+	console.log(a);
+
+	let b = document.querySelector('.out-11');
+	b.innerHTML = a;
 
 }
 
