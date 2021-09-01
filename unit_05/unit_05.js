@@ -111,7 +111,7 @@ function t6() {
 	let a = +document.querySelector('.i-6').value;
 
 	let b = '';
-	
+
 	for (let i = 0; i < a; i++) {
 		b = b + '******<br>';
 	}
@@ -131,7 +131,18 @@ document.querySelector('.b-6').onclick = t6;
 // Задача решается с помощью цикла.
 
 function t7() {
+	let a  = +document.querySelector('.i-7').value;
 
+	let b = '';
+
+	for (let i = a; i >= 0; i-- ) {
+		b += i + '_';
+	}
+
+	console.log(b);
+
+	let c = document.querySelector('.out-7');
+	c.innerHTML = b;
 }
 
 document.querySelector('.b-7').onclick = t7;
