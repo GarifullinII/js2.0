@@ -49,7 +49,6 @@ function t3() {
 
 	let b = document.querySelector('.out-3');
 	b.innerHTML = a;
-
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -69,7 +68,6 @@ function t4() {
 
 	let b = document.querySelector('.out-4');
 	b.innerHTML = a;
-
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -81,7 +79,19 @@ document.querySelector('.b-4').onclick = t4;
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, и две звездочки если четное). Задача решается с помощью цикла.
 
 function t5() {
+	let a = '';
 
+	for (let i = 1; i < 18; i++) {
+		if (i%2 == 0) {
+			a += i + '_**';
+		}
+		else {
+			a += i + '_*';
+		}
+	}
+
+	let b = document.querySelector('.out-5');
+	b.innerHTML = a;
 }
 
 document.querySelector('.b-5').onclick = t5;
