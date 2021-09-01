@@ -61,6 +61,14 @@ document.querySelector('.b-3').onclick = t3;
 
 
 function t4() {
+	let a = '';
+
+	for (let i = 77; i > 32; i = i - 3) {
+		a += i + '_';
+	}
+
+	let b = document.querySelector('.out-4');
+	b.innerHTML = a;
 
 }
 
