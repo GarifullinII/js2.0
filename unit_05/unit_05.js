@@ -284,15 +284,23 @@ function t13() {
 
 document.querySelector('.b-13').onclick = t13;
 
+
 //  Task 14
 // Кнопка .b-14 запускает функцию t14  Функция должна:
 //     получить все input.i-14
 // перебрать их с помощью цикла. Обращение к элементу выглядит так elem[i]
 // вывести в .out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
-
 function t14() {
+	let elem = document.querySelectorAll('.i-14');
+	let a = document.querySelector('.out-14');
 
+	for (let i = 0; i < elem.length; i++) {
+		if (elem[i].checked) {
+			a.innerHTML = elem[i].value;
+			break;
+		}
+	}
 }
 
 document.querySelector('.b-14').onclick = t14;
@@ -303,7 +311,13 @@ document.querySelector('.b-14').onclick = t14;
 // Подсказка (10 - i) + '_' + i + '_'
 
 function t15() {
+	let a = '';
 
+	for (let i = 0; i <= 10; i++) {
+		a += (10 - i) + '_' + i + '_';
+	}
+
+	document.querySelector('.out-15').innerHTML = a;
 }
 
 document.querySelector('.b-15').onclick = t15;
