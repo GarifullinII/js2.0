@@ -25,7 +25,6 @@ function t2() {
 	let a = '';
 
 	for (let i = 12; i < 40; i = i + 2) {
-		console.log(i);
 		a += i + '_';
 	}
 
@@ -163,7 +162,6 @@ function t8() {
 	for (let i = a; i <= b; i++) {
 		c += i + '_';
 	}
-	console.log(c);
 
 	let d = document.querySelector('.out-8');
 	d.innerHTML = c;
@@ -242,8 +240,6 @@ function t11() {
 	for (let i = 0; i < divs11.length; i ++) {
 		a += divs11[i].innerHTML + '_';
 	}
-
-	console.log(a);
 
 	let b = document.querySelector('.out-11');
 	b.innerHTML = a;
