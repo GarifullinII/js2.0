@@ -3,9 +3,15 @@
 //     1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_
 // Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
-
 function t1() {
+	let a = '';
 
+	for (let i = 1; i < 17; i++) {
+		a += i + '_';
+	}
+
+	let b = document.querySelector('.out-1');
+	b.innerHTML = a;
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -20,7 +26,6 @@ function t2() {
 }
 
 document.querySelector('.b-2').onclick = t2;
-
 
 //  Task 3
 // Кнопка .b-3 запускает функцию t3. Функция должна выводить в .out-3 строку вида:
