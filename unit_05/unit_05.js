@@ -234,7 +234,6 @@ document.querySelector('.b-10').onclick = t10;
 //     В результате должно получиться так:
 //     one_3_4_two_
 
-
 function t11() {
 	let divs11 = document.querySelectorAll('.div-11');
 
@@ -253,6 +252,7 @@ function t11() {
 
 document.querySelector('.b-11').onclick = t11;
 
+
 //  Task 12
 // Кнопка .b-12 запускает функцию t12.  Функция должна:
 //     получить все div.div-12
@@ -261,10 +261,15 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
+	let elem = document.querySelectorAll('.div-12');
 
+	for (let i = 0; i < elem.length; i = i + 1) {
+		elem[i].style.background = 'orange';
+	}
 }
 
 document.querySelector('.b-12').onclick = t12;
+
 
 //  Task 13
 // С помощью цикла присвойте всем input .i-13 value равное 1 для первого, 2 для второго и 3 для третьего.
