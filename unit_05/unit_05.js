@@ -22,7 +22,15 @@ document.querySelector('.b-1').onclick = t1;
 //Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t2() {
+	let a = '';
 
+	for (let i = 12; i < 40; i = i + 2) {
+		console.log(i);
+		a += i + '_';
+	}
+
+	let b = document.querySelector('.out-2');
+	b.innerHTML = a;
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -33,6 +41,14 @@ document.querySelector('.b-2').onclick = t2;
 // Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t3() {
+	let a = '';
+
+	for (let i = 25; i > 6; i--) {
+		a += i + '_';
+	}
+
+	let b = document.querySelector('.out-3');
+	b.innerHTML = a;
 
 }
 
