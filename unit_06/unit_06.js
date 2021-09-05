@@ -73,8 +73,19 @@ document.querySelector('.b-3').onclick = t3;
 // <p>С помощью вложенных циклов, нарисуйте строку:</p>
 // 1_1*2*3*4*5*2_1*2*3*4*5*3_1*2*3*4*5*
 // Внешний цикл выводит цифру и _, а внутренний выводит от 1 до 5 с *
-function t4() {
 
+function t4() {
+	let a  = document.querySelector('.out-4');
+
+	for (let i = 1; i < 4; i++) {
+		a.innerHTML += i;
+		a.innerHTML += '_';
+
+		for (let k = 1; k < 6; k++) {
+			a.innerHTML += k;
+			a.innerHTML += '*';
+		}
+	}
 }
 
 document.querySelector('.b-4').onclick = t4;
