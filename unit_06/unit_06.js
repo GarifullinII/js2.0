@@ -6,14 +6,16 @@
 // <p>где звездочкa рисуются с помощью внутреннего цикла от 0 до 3, а _ с помощью внешнего.</p>
 
 function t1() {
-	for (let i = 0; i ) {
-
-	}
-
 	let a = document.querySelector('.out-1');
-	let c = "Hi";
 
-	a.innerHTML = c;
+	for (let i = 0; i < 3; i++ ) {
+		
+		for (let k = 0; k < 3; k++) {
+			a.innerHTML += '*';
+		}
+
+		a.innerHTML += '_';
+	}
 }
 
 document.querySelector('.b-1').onclick = t1;
