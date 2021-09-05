@@ -213,7 +213,18 @@ document.querySelector('.b-8').onclick = t8;
 // 1_2_3_4_5_
 
 function t9() {
+	let a = document.querySelector('.out-9');
+	let b = '';
 
+	for (let i = 1; i <=5; i++) {
+
+		for (let k = 1; k <= i; k++) {
+			b += k+'_';
+		}
+		b += '<br/>';
+	}
+	
+	a.innerHTML = b;
 }
 
 document.querySelector('.b-9').onclick = t9;
