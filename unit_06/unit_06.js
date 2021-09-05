@@ -241,7 +241,21 @@ document.querySelector('.b-9').onclick = t9;
 
 
 function t10() {
+	let a = document.querySelector('.out-10');
+	let b = '';
 
+	for (let i = 0; i < 5; i++) {
+
+		for (let k = 1; k <= 10; k ++) {
+			if (i == 0 && k < 10) {
+				b += 0;
+			}
+			b += (i * 10 + k) + '_';
+		}
+		b += '<br/>';
+	}
+
+	a.innerHTML = b;
 }
 
 document.querySelector('.b-10').onclick = t10;
