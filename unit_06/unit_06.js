@@ -130,7 +130,21 @@ document.querySelector('.b-5').onclick = t5;
 
 
 function t6() {
+	let a = document.querySelector('.out-6');
 
+	for (let i = 0; i < 3; i++) {
+
+		for (let k = 1; k < 3; k++) {
+
+			if (k % 2 == 0) {
+				a.innerHTML += '01x';
+			}
+			else {
+				a.innerHTML += '10x';
+			}
+		}
+		a.innerHTML += '<br/>'
+	}
 }
 
 document.querySelector('.b-6').onclick = t6;
