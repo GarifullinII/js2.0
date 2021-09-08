@@ -4,7 +4,9 @@
 let a1 = 8;
 
 function t1() {
-
+    let out = document.querySelector('.out-1');
+    
+    out.innerHTML = a1;
 }
 
 document.querySelector('.b-1').onclick = t1;
