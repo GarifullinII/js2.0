@@ -130,6 +130,12 @@ document.querySelector('.b-8').onclick = function () {
 
 function t9(num) {
 
+    if (num % 2 == 0) {
+        return true
+    }
+    else {
+        return false
+    }
 }
 
 document.querySelector('.b-9').onclick = function () {
