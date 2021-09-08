@@ -147,7 +147,16 @@ document.querySelector('.b-9').onclick = function () {
 // Создайте функцию t10, которая принимает 2 числа и возвращает большее из них.В случае равенства - первое.
 
 function t10(x, y) {
-
+    
+    if (x > y) {
+        return x;
+    }
+    else if (x < y) {
+        return y;
+    }
+    else if (x = y) {
+        return x;
+    }
 }
 
 document.querySelector('.b-10').onclick = function () {
