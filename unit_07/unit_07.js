@@ -115,6 +115,7 @@ document.querySelector('.b-7').onclick = function () {
 
 function t8(str) {
 
+    return s = str.trim();
 }
 
 document.querySelector('.b-8').onclick = function () {
