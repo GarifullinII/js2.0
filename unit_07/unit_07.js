@@ -77,7 +77,7 @@ document.querySelector('.b-5').onclick = function () {
 // Напишите функцию t6, которая принимает 2 числа и возвращает случайное целое число от первого до второго принятого параметра. Внимание, это первая задача, решение которой нужно найти в google. Не пишите решение сами!
 
 function t6(a, b) {
-
+    return Math.random()*(a - b) + b;
 }
 
 document.querySelector('.b-6').onclick = function () {
