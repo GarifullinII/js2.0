@@ -35,6 +35,7 @@ document.querySelector('.b-2').onclick = function () {
 
 function t3(a, b) {
 
+    return a*b;
 }
 
 document.querySelector('.b-3-1').onclick = function () {
@@ -50,10 +51,11 @@ document.querySelector('.b-3-2').onclick = function () {
 
 function t4(year) {
 
+    return year;
 }
 
 document.querySelector('.b-4').onclick = function () {
-    document.querySelector('.out-4').textContent = t4(1983);
+    document.querySelector('.out-4').textContent = (2021 - t4(1987));
 }
 
 
