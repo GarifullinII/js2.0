@@ -8,8 +8,8 @@ function t1() {
 	let a = document.querySelector('.out-1');
 	let b = 1;
 	let c = '';
-	
-	while ( b < 51) {
+
+	while ( b < 51 ) {
 		c += b + '_';
 		b++;
 	}
@@ -25,7 +25,19 @@ document.querySelector('.b-1').onclick = t1;
 // от 2 до 46 c шагом 2. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла  while.
 
 function t2() {
+	let a = document.querySelector('.out-2');
+	let b = 2;
+	let c = '';
 
+	while ( b < 48 ) {
+
+		if (b%2 == 0) {
+			c += b + '_';
+		}
+		b++;
+	}
+
+	a.textContent = c;
 }
 
 document.querySelector('.b-2').onclick = t2;
