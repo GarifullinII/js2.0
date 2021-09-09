@@ -5,7 +5,16 @@
 
 
 function t1() {
+	let a = document.querySelector('.out-1');
+	let b = 1;
+	let c = '';
+	
+	while ( b < 51) {
+		c += b + '_';
+		b++;
+	}
 
+	a.textContent = c;
 }
 
 document.querySelector('.b-1').onclick = t1;
