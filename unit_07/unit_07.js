@@ -90,7 +90,7 @@ document.querySelector('.b-6').onclick = function () {
 
 function t6(a,b) {
 
-    return Math.random()*(a - b) + b;
+    return Math.floor(Math.random()*(a - b) + b);
 }
 
 function t7() {
