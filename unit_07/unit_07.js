@@ -51,11 +51,11 @@ document.querySelector('.b-3-2').onclick = function () {
 
 function t4(year) {
 
-    return year;
+    return (2021 - year);
 }
 
 document.querySelector('.b-4').onclick = function () {
-    document.querySelector('.out-4').textContent = (2021 - t4(1987));
+    document.querySelector('.out-4').textContent = t4(1987);
 }
 
 
