@@ -89,7 +89,22 @@ document.querySelector('.b-4').onclick = t4;
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и одна звездочка если число нечетное, и две звездочки если четное. Задача решается с помощью цикла  while.
 
 function t5() {
+	let a = document.querySelector('.out-5');
+	let b = 1;
+	let c = '';
 
+	while ( b < 18) {
+
+		if ( b % 2 == 0) {
+			c += b + '_**';
+		}
+		else {
+			c += b + '_*';
+		}
+		b++
+	}
+
+	a.textContent = c;
 }
 
 document.querySelector('.b-5').onclick = t5;
