@@ -49,7 +49,16 @@ document.querySelector('.b-2').onclick = t2;
 // от 25 до 7 c шагом 1. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла  while.
 
 function t3() {
+	let a = document.querySelector('.out-3');
+	let b = 25;
+	let c = '';
 
+	while ( b >= 7 ) {
+		c += b + '_';
+		b--;
+	}
+
+	a.textContent = c;
 }
 
 document.querySelector('.b-3').onclick = t3;
