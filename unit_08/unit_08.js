@@ -3,7 +3,6 @@
 //     1_2_3_4_5_6_7_8_9_ ... 49_50_
 // от 1 до 50 включительно. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
-
 function t1() {
 	let a = document.querySelector('.out-1');
 	let b = 1;
@@ -68,9 +67,17 @@ document.querySelector('.b-3').onclick = t3;
 // 77_74_71_68_65_62_59_56_53_50_47_44_41_38_35_
 // от 77 до 35 c шагом 3. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла  while.
 
-
 function t4() {
+	let a = document.querySelector('.out-4');
+	let b = 77;
+	let c = '';
 
+	while ( b >= 35) {
+		c += b + '_';
+		b = b - 3;
+	}
+
+	a.textContent = c;
 }
 
 document.querySelector('.b-4').onclick = t4;
