@@ -143,7 +143,16 @@ document.querySelector('.b-6').onclick = t6;
 // Задача решается с помощью цикла  while.
 
 function t7() {
+	let a = +document.querySelector('.i-7').value;
+	let b = document.querySelector('.out-7');
+	let c = '';
 
+	while ( a >= 0 ) {
+		c += a + '_';
+		a--;
+	}
+
+	b.innerHTML = c;
 }
 
 document.querySelector('.b-7').onclick = t7;
