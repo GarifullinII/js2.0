@@ -167,7 +167,16 @@ document.querySelector('.b-7').onclick = t7;
 // Задача решается с помощью цикла  while.
 
 function t8() {
+	let a1 = +document.querySelector('.i-81').value;
+	let a2 = +document.querySelector('.i-82').value;
+	let c = document.querySelector('.out-8');
+	let b = '';
 
+	while ( a2 >= a1 ) {
+		b += a1 + '_';
+		a1++;
+	}
+	c.innerHTML = b;
 }
 
 document.querySelector('.b-8').onclick = t8;
