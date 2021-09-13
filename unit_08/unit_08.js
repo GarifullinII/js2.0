@@ -238,9 +238,18 @@ document.querySelector('.b-10').onclick = t10;
 //     В результате должно получиться так:
 //     one_3_4_two_
 
-
 function t11() {
+	let a = document.querySelectorAll('.div-11');
+	let b = '';
+	let c = document.querySelector('.out-11');
+	let i = 0;
 
+	while ( i < a.length) {
+		b += a[i].innerHTML + '_';
+		i++;
+	}
+
+	c.innerHTML = b;
 }
 
 document.querySelector('.b-11').onclick = t11;
