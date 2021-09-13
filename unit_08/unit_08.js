@@ -260,9 +260,15 @@ document.querySelector('.b-11').onclick = t11;
 // перебрать их с помощью цикла  while. Обращение к div выглядит так elem[i]
 // применить к каждому elem[i].style.background = 'orange'
 
-
 function t12() {
+	let elem = document.querySelectorAll('.div-12');
+	let b = '';
+	let i = 0;
 
+	while ( i < elem.length) {
+		elem[i].style.background = 'orange';
+		i++;
+	}
 }
 
 document.querySelector('.b-12').onclick = t12;
