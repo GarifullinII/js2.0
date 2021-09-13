@@ -192,7 +192,20 @@ document.querySelector('.b-8').onclick = t8;
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку и при необходимости поменять местами значения в переменных местами, а потом запускаем цикл  while.
 
 function t9() {
+	let a1 = +document.querySelector('.i-91').value;
+	let a2 = +document.querySelector('.i-92').value;
+	let c = document.querySelector('.out-9');
+	let b = '';
 
+	if ( a1 > a2 ) {
+		[a1, a2] = [a2, a1];
+	}
+
+	while ( a2 >= a1 ) {
+		b += a1 + '_';
+		a1++;
+	}
+	c.innerHTML = b;
 }
 
 document.querySelector('.b-9').onclick = t9;
