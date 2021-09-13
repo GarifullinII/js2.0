@@ -319,7 +319,22 @@ document.querySelector('.b-14').onclick = t14;
 // Для вывода использовать цикл  while. Разделитель подчеркивание.
 
 function t15() {
+	let a = document.querySelector('.out-15');
+	let b = '';
+	let i = 1;
 
+	while ( i <= 3 ) {
+
+		let c = 77;
+		while ( c <= 99) {
+			b += c + '_';
+			c = c + 11;
+		}
+		
+		i++
+	}
+
+	a.innerHTML = b;
 }
 
 document.querySelector('.b-15').onclick = t15;
