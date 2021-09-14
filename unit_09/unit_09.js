@@ -13,7 +13,8 @@ document.querySelector('.b-1').onclick = f1;
 // По нажатию на кнопку .b-2 функция f2, которая присваивает блоку .out-2 класс .bg-orange.
 
 function f2() {
-    
+    let a = document.querySelector('.out-2');
+    a.classList.add('bg-orange');
 }
 
 document.querySelector('.b-2').onclick = f2;
