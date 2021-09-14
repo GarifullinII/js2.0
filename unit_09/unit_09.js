@@ -1,9 +1,10 @@
 //  Task 1
 // По нажатию на кнопку .b-1 функция присваивает блоку .out-1 ширину 200px, высоту 90px.
 
-
 function f1() {
-
+    let a = document.querySelector('.out-1');
+    a.style.width = '200px';
+    a.style.height = '90px';
 }
 
 document.querySelector('.b-1').onclick = f1;
@@ -12,7 +13,7 @@ document.querySelector('.b-1').onclick = f1;
 // По нажатию на кнопку .b-2 функция f2, которая присваивает блоку .out-2 класс .bg-orange.
 
 function f2() {
-
+    
 }
 
 document.querySelector('.b-2').onclick = f2;
