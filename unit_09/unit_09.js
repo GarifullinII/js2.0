@@ -33,9 +33,9 @@ document.querySelector('.b-3').onclick = f3;
 //  Task 4
 // По нажатию кнопки .b-4 запускайте функцию f4, которая делает toggle класса .bg-orange для блока out-4.
 
-
 function f4() {
-
+    let a = document.querySelector('.out-4');
+    a.classList.toggle('bg-orange');
 }
 
 document.querySelector('.b-4').onclick = f4;
