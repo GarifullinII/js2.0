@@ -19,7 +19,6 @@ function f2() {
 
 document.querySelector('.b-2').onclick = f2;
 
-
 //  Task 3
 // По нажатию кнопки .b-3 запускайте функцию f3, которая удаляет у блока .out-3 класс .bg-orange.
 
@@ -40,12 +39,18 @@ function f4() {
 
 document.querySelector('.b-4').onclick = f4;
 
-
 //  Task 5
 // По нажатию .b-5 запускайте функцию f5, которая проверяет наличие класса .bg-orange у блока .out-4 (да, именно у out-4 ). Результат - true или false, выводите в .out-5.
 
 function f5() {
-
+    let a = document.querySelector('.out-4');
+    let b = document.querySelector('.out-5');
+    if ( a.classList.contains('bg-orange') ) {
+        b.innerHTML = true;
+    }
+    else {
+        b.innerHTML = false;
+    }
 }
 
 document.querySelector('.b-5').onclick = f5;
