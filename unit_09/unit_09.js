@@ -145,9 +145,18 @@ while ( i < div10.length ) {
 //  Task 11
 // Кнопка .b-11, запускает функцию f11. Функция создает через createElement div c текстом 25 и добавляет его через append в .out-11.
 
-
 function f11() {
+    let a = document.querySelector('.out-11');
+    let b = document.createElement('div'); 
 
+    if (f11.isShow) {
+        return false;
+    }
+
+    f11.isShow = true;
+
+    b.innerHTML = 25;
+    a.append(b);
 }
 
 document.querySelector('.b-11').onclick = f11;
