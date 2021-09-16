@@ -213,7 +213,13 @@ document.querySelector('.b-14').onclick = f14;
 // Кнопкa .b-15, которая запускает функцию f15. Функция создает через createElement div c текстом 15 и добавляет ему класс .bg-orange. Созданный div добавляется перед .out-15 с помощью before.
 
 function f15() {
+    let div15 = document.createElement('div');
+    div15.innerHTML = '15';
+    div15.classList.add('bg-orange');
 
+    let out15 = document.querySelector('.out-15');
+
+    out15.before(div15);
 }
 
 document.querySelector('.b-15').onclick = f15;
