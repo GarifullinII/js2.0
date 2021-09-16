@@ -75,7 +75,14 @@ document.querySelector('.b-6').onclick = f6;
 let blocks7 = document.querySelectorAll('.out-7');
 
 function f7() {
-    //внутри цикла blocks7[i].classList....
+    let i = 0;
+    while ( i < blocks7.length ) {
+
+        blocks7[i].classList.add('bg-orange');
+        i++;
+
+        //внутри цикла blocks7[i].classList....
+    }
 }
 
 document.querySelector('.b-7').onclick = f7;
