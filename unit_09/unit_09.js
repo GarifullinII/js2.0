@@ -175,7 +175,16 @@ document.querySelector('.b-12').onclick = f12;
 // Кнопка .b-13, запускает функцию f13. Функция создает через createElement div c текстом pushMe и добавляет ему класс bg-orange. Также, созданному div добавляется событие onclick, по которому выполняется функция f13_1. Созданный div добавляется в .out-13.
 
 function f13() {
+    let divPush = document.createElement('div');
+    divPush.innerHTML = 'pushMe';
+    divPush.classList.add('bg-orange');
 
+    divPush.onclick = f13_1;
+
+    let out13 = document.querySelector('.out-13');
+
+
+    out13.append(divPush);
 }
 
 function f13_1() {
