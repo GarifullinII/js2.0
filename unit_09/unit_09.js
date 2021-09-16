@@ -94,7 +94,14 @@ document.querySelector('.b-7').onclick = f7;
 let blocks8 = document.querySelectorAll('.out-8');
 
 function f8() {
-    //внутри цикла blocks8[i].classList....
+    let i = 0;
+    while ( i < blocks8.length ) {
+
+        blocks8[i].classList.toggle('bg-orange');
+        i++;
+
+        //внутри цикла blocks8[i].classList....
+    }
 }
 
 document.querySelector('.b-8').onclick = f8;
