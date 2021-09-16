@@ -199,7 +199,12 @@ document.querySelector('.b-13').onclick = f13;
 
 
 function f14() {
+    let div14 = document.createElement('div');
+    div14.innerHTML = '14';
+    div14.classList.add('bg-orange');
 
+    let out14 = document.querySelector('.out-14');
+    out14.append(div14);
 }
 
 document.querySelector('.b-14').onclick = f14;
