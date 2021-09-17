@@ -120,6 +120,15 @@ document.querySelector('.b-6').onclick = f6;
 let ar7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function f7() {
+    let out7 = document.querySelector('.out-7');
+
+    ar7[5] = 'italy';
+    ar7[6] = 'turkey';
+    ar7[7] = 'vietnam';
+
+    for (let i = 0; i < ar7.length; i++ ) {
+        out7.innerHTML += ar7[i] + ' ';
+    }
 }
 
 document.querySelector('.b-7').onclick = f7;
