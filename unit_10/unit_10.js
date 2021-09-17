@@ -126,9 +126,13 @@ function f7() {
     ar7[6] = 'turkey';
     ar7[7] = 'vietnam';
 
+    let val = ''
+
     for (let i = 0; i < ar7.length; i++ ) {
-        out7.innerHTML += ar7[i] + ' ';
+        val += ar7[i] + ' ';
     }
+
+    out7.innerHTML = val;
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -149,9 +153,13 @@ function f8() {
     let out8 = document.querySelector('.out-8');
     let out81 = document.querySelector('.out-8-1');
 
+    let val = '';
+
     for ( let i = 0; i < ar8.length; i++ ) {
-        out8.innerHTML += ar8[i] + ' ';
+        val += ar8[i] + ' ';
     }
+
+    out8.innerHTML = val;
 
     out81.innerHTML = ar8.length;
 }
