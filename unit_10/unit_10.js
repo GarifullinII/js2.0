@@ -100,9 +100,13 @@ document.querySelector('.b-5').onclick = f5;
 // Вывод - по нажатию кнопки b-6
 // Вывод в out-6
 
+let ar6 = ['Ildar', 'Twin', 7, 6]
 // let ar6 =
 
 function f6() {
+    let out6 = document.querySelector('.out-6');
+    let val = ar6[0] + ' ' + ar6[1] + ' ' + ar6[2] + ' ' + ar6[3];
+    out6.innerHTML = val;
 }
 
 document.querySelector('.b-6').onclick = f6;
