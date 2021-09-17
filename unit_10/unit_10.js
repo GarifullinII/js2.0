@@ -40,9 +40,12 @@ document.querySelector('.b-2').onclick = f2;
 // Вывод в out-3
 // Тест допустим массив [1,2,3] вывод - 3
 
+let ar3 = ['KPRF', 1, true, 'ER', 3, false];
 // let ar3 =  // переменную обьявляем здесь!!!!
 
 function f3() {
+    let out3 = document.querySelector('.out-3');
+    out3.innerHTML = ar3.length;
 }
 
 document.querySelector('.b-3').onclick = f3;
