@@ -239,6 +239,18 @@ document.querySelector('.b-11').onclick = f11;
 let ar12 = ['test', 'west', 'list', 'class', 'best'];
 
 function f12() {
+    let ch = ar12[0];
+    ar12[0] = ar12[ar12.length - 1];
+    ar12[ar12.length - 1] = ch;
+
+    let out12 = document.querySelector('.out-12');
+
+    let val = '';
+    for (let i = 0; i < ar12.length; i++) {
+        val += ar12[i] + ' ';
+    }
+
+    out12.innerHTML = val;
 
 }
 
