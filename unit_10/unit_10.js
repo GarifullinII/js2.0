@@ -213,7 +213,18 @@ document.querySelector('.b-10').onclick = f10;
 let ar11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
+    let ch2 = ar11[2];
+    ar11[2] = ar11[4];
+    ar11[4] = ch2;
 
+    let out11 = document.querySelector('.out-11');
+
+    let val = '';
+    for ( let i = 0; i < ar11.length; i++ ) {
+        val += ar11[i] + ' ';
+    }
+
+    out11.innerHTML = val;
 }
 
 document.querySelector('.b-11').onclick = f11;
