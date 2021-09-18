@@ -291,7 +291,14 @@ document.querySelector('.b-13').onclick = f13;
 let ar14 = [1, 2, 3, 'hello', 66];
 
 function f14() {
+    let out14 = document.querySelector('.out-14');
 
+    let val = '';
+    for ( let i = ar14.length - 1; i >= 0; i--) {
+        val += ar14[i] + ' ';
+    }
+
+    out14.innerHTML = val;
 }
 
 document.querySelector('.b-14').onclick = f14;
