@@ -268,7 +268,15 @@ document.querySelector('.b-12').onclick = f12;
 let ar13 = ['test', 'west', 'list', 'class', 'best'];
 
 function f13() {
+    let out13 = document.querySelector('.out-13');
 
+    let val = '';
+
+    for ( let i = 0; i < ar13.length; i++ ) {
+        val += i + ' ' + ar13[i] + ' ';
+    }
+
+    out13.innerHTML = val;
 }
 
 document.querySelector('.b-13').onclick = f13;
