@@ -328,7 +328,38 @@ let ar16_odd = [];
 let ar16_even = [];
 
 function f16() {
+    ar16_odd = [];
+    ar16_even = [];
 
+    for ( let i = 0; i < ar16.length; i++ ) {
+        if ( ar16[i] % 2 == 0 ) {
+            ar16_even.push(ar16[i]);
+        }
+        else {
+            ar16_odd.push(ar16[i]);
+        }
+    }
+
+    console.log(ar16_odd);
+    console.log(ar16_even);
+
+    let odd_out = '';
+
+    for ( let i = 0; i < ar16_odd.length; i++ ) {
+        odd_out += ar16_odd[i] + ' ';
+    }
+
+    let out16odd = document.querySelector('.out-16-odd');
+    out16odd.innerHTML = odd_out;
+
+    let out_even = '';
+
+    for ( let i = 0; i < ar16_even.length; i++ ) {
+        out_even += ar16_even[i] + ' ';
+    }
+
+    let out16even = document.querySelector('.out-16-even');
+    out16even.innerHTML = out_even;
 }
 
 document.querySelector('.b-16').onclick = f16;
