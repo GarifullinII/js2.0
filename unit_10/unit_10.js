@@ -430,7 +430,18 @@ document.querySelector('.b-18').onclick = f18;
 let ar19 = [15, 424, 313, 78, 241, 4, 45, 67];
 
 function f19() {
+    let out19 = document.querySelector('.out-19');
 
+    let minI = ar19[0];
+
+    for ( let i = 0; i < ar19.length; i++ ) {
+
+        if (ar19[i] < minI) {
+            minI = i;
+        }
+    }
+
+    out19.innerHTML = minI;
 }
 
 document.querySelector('.b-19').onclick = f19;
