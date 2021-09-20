@@ -156,7 +156,7 @@ function f8() {
     let val = '';
 
     for ( let i = 0; i < ar8.length; i++ ) {
-        val += ar8[i] + ' ';
+        val += ar8[i] + '-';
     }
 
     out8.innerHTML = val;
