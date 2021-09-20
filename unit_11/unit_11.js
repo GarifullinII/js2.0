@@ -12,6 +12,10 @@ function showArr(domElem, arr) {
 let d1 = [33, 'best', 66, 'best'];
 
 function f1() {
+    
+    let i1 = document.querySelector('.i-1').value;
+
+    d1.push(i1);
     /**
      * ваш код здесь
      */
