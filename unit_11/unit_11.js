@@ -200,7 +200,7 @@ document.querySelector('.b-10').onclick = f10;
 let d11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
-    
+
     let i11 = +document.querySelector('.i-11').value;
 
     let out11 = document.querySelector('.out-11');
@@ -221,6 +221,21 @@ let d12 = [6, 62, 60, 70, 1, 5];
 
 function f12() {
 
+    let i12 = +document.querySelector('.i-12').value;
+
+    let out12 = document.querySelector('.out-12');
+
+    let val = -1;
+
+    for ( let i = 0; i < d12.length; i++ ) {
+
+        if ( i12 == d12[i] ) {
+            val = i;
+            break
+        }
+    }
+
+    out12.innerHTML = val;
 }
 
 document.querySelector('.b-12').onclick = f12;
