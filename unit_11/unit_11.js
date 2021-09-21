@@ -86,6 +86,11 @@ document.querySelector('.b-5').onclick = f5;
 let d6 = ['test', 5, 12];
 
 function f6() {
+    let i6 = document.querySelector('.i-6').value;
+    
+    let nextFreeIndex = d6.length;
+
+    d6[nextFreeIndex] = i6;
 
     showArr('.out-6', d6);
 }
