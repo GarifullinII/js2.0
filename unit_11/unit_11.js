@@ -29,6 +29,7 @@ document.querySelector('.b-1').onclick = f1;
 // функция выполняется при нажатии кнопки b-2
 
 function f2() {
+
     d1.pop();
 
     showArr('.out-2', d1);
@@ -41,6 +42,7 @@ document.querySelector('.b-2').onclick = f2;
 // функция выполняется при нажатии кнопки b-3
 
 function f3() {
+
     d1.shift();
 
     showArr('.out-3', d1);
@@ -54,6 +56,7 @@ document.querySelector('.b-3').onclick = f3;
 
 
 function f4() {
+
     let i4 = document.querySelector('.i-4').value;
 
     d1.push(i4);
@@ -68,6 +71,7 @@ document.querySelector('.b-4').onclick = f4;
 // функция выполняется при нажатии кнопки b-5
 
 function f5() {
+
     let i5 = document.querySelector('.i-5').value;
 
     d1.unshift(i5);
@@ -86,6 +90,7 @@ document.querySelector('.b-5').onclick = f5;
 let d6 = ['test', 5, 12];
 
 function f6() {
+
     let i6 = document.querySelector('.i-6').value;
     
     let nextFreeIndex = d6.length;
@@ -106,7 +111,9 @@ document.querySelector('.b-6').onclick = f6;
 let d7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function f7() {
+
     let del = d7.length - 1;
+
     d7.length = del;
 
     showArr('.out-7', d7);
@@ -123,6 +130,7 @@ document.querySelector('.b-7').onclick = f7;
 let d8 = [2, '4', 12, 67, 'hello'];
 
 function f8() {
+
     let val = document.querySelector('.i-8').value;
 
     let newArr = [];
@@ -149,6 +157,7 @@ document.querySelector('.b-8').onclick = f8;
 let d9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
+
     let newArr = [];
 
     for ( let i = 1; i < d9.length; i++ ) {
@@ -191,7 +200,12 @@ document.querySelector('.b-10').onclick = f10;
 let d11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
+    
+    let i11 = +document.querySelector('.i-11').value;
 
+    let out11 = document.querySelector('.out-11');
+
+    out11.innerHTML = d11.indexOf(i11);
 }
 
 document.querySelector('.b-11').onclick = f11;
