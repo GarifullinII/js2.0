@@ -141,7 +141,7 @@ function f8() {
 document.querySelector('.b-8').onclick = f8;
 
 // Task 9
-// Напишите функцию f8, которая эмулирует работу метода shift - на примере массива d9.
+// Напишите функцию f9, которая эмулирует работу метода shift - на примере массива d9.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-9
 // Вывод в out-9
@@ -149,6 +149,15 @@ document.querySelector('.b-8').onclick = f8;
 let d9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
+    let newArr = [];
+
+    for ( let i = 1; i < d9.length; i++ ) {
+        newArr.push(d9[i]);
+    }
+
+    d9 = newArr;
+
+    console.log(d9);
 
     showArr('.out-9', d9);
 }
