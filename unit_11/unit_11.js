@@ -373,7 +373,11 @@ document.querySelector('.b-17').onclick = f17;
 let d18 = ['b', 'c', '45', 'e', 'z', 'y'];
 
 function f18() {
+    let i18 = document.querySelector('.i-18').value;
 
+    let out18 = document.querySelector('.out-18');
+
+    out18.innerHTML = d18.includes(i18);
 }
 
 document.querySelector('.b-18').onclick = f18;
