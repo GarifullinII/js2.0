@@ -396,15 +396,15 @@ function f19() {
 
     let out19 = document.querySelector('.out-19');
 
-    let Str = d19[0];
+    let  str = d19[0];
 
     for ( let i = 0; i < d19.length; i++ ) {
-        if (d19[i].length > Str.length) {
-            Str = d19[i];
+        if (d19[i].length > str.length) {
+            str = d19[i];
         }
     }
 
-    out19.innerHTML = Str;
+    out19.innerHTML = str;
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -419,6 +419,9 @@ let d20 = [4, 5, 6, 7, 8, 9, 10];
 
 function f20() {
 
+    let out20 = document.querySelector('.out-20');
+
+    out20.innerHTML = d20.join('');
 }
 
 document.querySelector('.b-20').onclick = f20;
