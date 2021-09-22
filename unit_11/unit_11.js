@@ -300,6 +300,15 @@ let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
 
+    let i15 = +document.querySelector('.i-15').value;
+
+    for ( let i = 0; i < d15.length; i++) {
+        if ( d15[i] === i15 ) {
+            break
+        }
+    }
+
+    d15.push(i15);
 
     showArr('.out-15', d15);
 }
@@ -318,6 +327,8 @@ let d162 = [23, 24, 56, 87];
 
 function f16() {
 
+    let d16 = d161.concat(d162);
+
     showArr('.out-16', d16);
 }
 
@@ -334,6 +345,18 @@ let d171 = ['a', 'b', 'c', 'd'];
 let d172 = [1, 2, 3, 4, 5];
 
 function f17() {
+
+    d17 = [];
+
+    for ( let i = 0; i < d171.length; i++) {
+        d17.push(d171[i]);
+    }
+
+    for ( let k = 0; k < d172.length; k++) {
+        d17.push(d172[k]);
+    }
+
+    console.log(d17);
 
     showArr('.out-17', d17);
 }
