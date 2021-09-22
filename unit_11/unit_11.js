@@ -394,6 +394,17 @@ let maxString = '';
 
 function f19() {
 
+    let out19 = document.querySelector('.out-19');
+
+    let Str = d19[0];
+
+    for ( let i = 0; i < d19.length; i++ ) {
+        if (d19[i].length > Str.length) {
+            Str = d19[i];
+        }
+    }
+
+    out19.innerHTML = Str;
 }
 
 document.querySelector('.b-19').onclick = f19;
