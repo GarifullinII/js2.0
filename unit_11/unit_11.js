@@ -303,12 +303,10 @@ function f15() {
     let i15 = +document.querySelector('.i-15').value;
 
     for ( let i = 0; i < d15.length; i++) {
-        if ( d15[i] === i15 ) {
-            break
+        if (d15.indexOf(i15) === -1) {
+            d15.push(i15)
         }
     }
-
-    d15.push(i15);
 
     showArr('.out-15', d15);
 }
