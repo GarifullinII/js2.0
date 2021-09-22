@@ -250,6 +250,7 @@ document.querySelector('.b-12').onclick = f12;
 let d13 = [6, 0, 22, 1, 4, 76];
 
 function f13() {
+
     let newArr = [];
 
     for ( let i = d13.length - 1; i >= 0; i-- ) {
@@ -273,6 +274,16 @@ document.querySelector('.b-13').onclick = f13;
 let d14 = [];
 
 function f14() {
+
+    d14 = [];
+    
+    let i14 = +document.querySelector('.i-14').value;
+
+    let val = 1;
+
+    for ( let i = 0; i < i14; i++ ) {
+        d14.push(val);
+    }
 
     showArr('.out-14', d14);
 }
