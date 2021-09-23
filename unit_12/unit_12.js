@@ -122,7 +122,7 @@ function f8() {
     ];
     for (let i = 0; i < a8.length; i++) {
         for (let k = 0; k < a8[i].length; k++) {
-            if (a8[i][k] % 2 !==0) out += a8[i][k] + ' ';
+            if (a8[i][k] % 2 !== 0) out += a8[i][k] + ' ';
         }
     }
     document.querySelector('.out-8').innerHTML = out;
@@ -143,7 +143,12 @@ function f9() {
         [21, -34, -43],
         [44, -56]
     ];
-
+    for (let i = 0; i < a9.length; i++) {
+        for (let k = 0; k < a9[i].length; k++) {
+            if (a9[i][k] > 0) out += a9[i][k] + ' ';
+        }
+    }
+    document.querySelector('.out-9').innerHTML = out;
 
 }
 
