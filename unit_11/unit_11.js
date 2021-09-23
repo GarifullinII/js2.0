@@ -135,7 +135,7 @@ function f8() {
 
     let newArr = [];
 
-    d8[0] = val;
+    newArr[0] = val;
 
     for ( let i = 0; i < d8.length; i++ ) {
         newArr.push(d8[i]);
