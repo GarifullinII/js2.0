@@ -238,7 +238,27 @@ document.querySelector('.b-12').onclick = f12;
 let a13 = [];
 
 function f13() {
+    a13 = [];
 
+    let p = 0;
+    
+    for (let i = 0 ; i < 8; i++) {
+        let t = []; // сюда складываем вложенный массив
+        for (let k = 0 ; k < 8; k++) {
+            
+            if (p % 2 === 0) {
+			t.push(1);
+        } else {
+			t.push(0);
+        }
+
+		p++;
+	}
+	// здесь нужно в a13 добавить вложенный
+	a13.push(t);
+	p++; // вот тут еще раз увеличиваем
+}
+console.log(a13);
 }
 
 document.querySelector('.b-13').onclick = f13;
