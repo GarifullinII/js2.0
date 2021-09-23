@@ -42,14 +42,16 @@ document.querySelector('.b-3').onclick = f3;
 // Task 4
 // При нажатии b-4 выполняете функцию f4. Функция должна вывести в out-4 значение go из массива a4. Возвратите это значение.
 
-
 function f4() {
     let a4 = [[1, 2, 3], 'go', [3, 4, 5], [6, [7, 'my']]];
-
+    let out4 = document.querySelector('.out-4');
+    out4.innerHTML = a4[1];
     // return
+    return a4[1];
 }
 
 document.querySelector('.b-4').onclick = f4;
+
 
 // Task 5
 // При нажатии b-5 выполняете функцию f5. Функция должна вывести в out-5 четные значения из массива a5. Для перебора используем цикл.
