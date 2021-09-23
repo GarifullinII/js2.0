@@ -14,11 +14,12 @@ document.querySelector('.b-1').onclick = f1;
 // Task 2
 // При нажатии b-2 выполняете функцию f2. Функция должна вывести в out-2 значение hi из массива a2. Возвратите это значение.
 
-
 function f2() {
     let a2 = [[12, 'hi'], [45, 87], [55, 13]];
-
+    let out2 = document.querySelector('.out-2');
+    out2.innerHTML = a2[0][1];
     // return
+    return a2[0][1];
 }
 
 document.querySelector('.b-2').onclick = f2;
