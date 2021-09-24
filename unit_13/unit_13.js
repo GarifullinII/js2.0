@@ -22,7 +22,6 @@ document.querySelector('.b-1').onclick = f1;
 // При нажатии b-2 выполняете функцию f2. Функция должна вывести в out-2 значение hi из массива a2. Возвратите это значение.
 // Вывод, как и в предыдущем задании пишем "руками"
 
-
 function f2() {
     let a2 = {
         "one": "hello",
@@ -30,6 +29,9 @@ function f2() {
         "five": "hi"
     };
 
+    document.querySelector('.out-2').innerHTML = a2.five;
+    
+    return a2.five;
     // return
 }
 
