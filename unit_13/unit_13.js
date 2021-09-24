@@ -54,6 +54,10 @@ function f3() {
         "odd": "hi",
         "mix": "mix"
     };
+
+    document.querySelector('.out-3').innerHTML = `${a3.five} ${a3.five}`;
+
+    return `${a3.five} ${a3.five}`;
     // return
 }
 
