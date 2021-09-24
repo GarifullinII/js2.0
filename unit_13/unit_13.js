@@ -81,7 +81,7 @@ function f4() {
     let out = '';
 
     for (let key in a4) {
-        out += `${key} ${a4[key]} ${'<br/>'}`;
+        out += `${key} ${a4[key]} <br/>`;
     }
 
     return out
@@ -98,9 +98,14 @@ document.querySelector('.b-4').onclick = () => {
 
 function f5(arr, block) {
     let out = '';
+
+    for (let key in arr) {
+        out += `${key} : ${arr[key]} <br>`;
+    }
     // цикл
     // формат вывода `${key} : ${arr[key]} <br>`;
-    //
+    
+    document.querySelector(block).innerHTML = out;
     // тут вывод в блок block
 }
 
