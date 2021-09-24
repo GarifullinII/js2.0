@@ -300,7 +300,16 @@ let a15 = [
 ];
 
 function f15() {
+    let maxLenght = a15[0];
 
+    for (let i = 0; i < a15.length; i++) {
+        
+        if (a15[i].length > maxLenght.length) {
+            maxLenght = a15[i];
+        }
+    }
+
+    document.querySelector('.out-15').innerHTML = maxLenght.length;
 }
 
 document.querySelector('.b-15').onclick = f15;
