@@ -8,7 +8,10 @@ function f1() {
         "two": 16,
         "five": 20
     };
+
     document.querySelector('.out-1').innerHTML = a1.two;
+
+    return a1.two;
     //return ...
 }
 
