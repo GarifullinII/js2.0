@@ -202,7 +202,17 @@ let a9 = {
 };
 
 function f9() {
+    let i9 = document.querySelector('.i-9').value;
 
+    let out = '';
+
+    for (let key in a9) { 
+        if (i9 == a9[key]) {
+            out += `${key} `;
+        }
+    }
+
+    document.querySelector('.out-9').innerHTML = out;
 }
 
 document.querySelector('.b-9').onclick = f9;
