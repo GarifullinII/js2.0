@@ -148,9 +148,18 @@ let a7 = {
     "e": 22
 };
 
-
 function f7() {
+    let i7 = document.querySelector('.i-7').value;
 
+    let out = '';
+
+    if (a7[i7] !== undefined) {
+        out = 1;
+    } else {
+        out = 0;
+    }
+
+    document.querySelector('.out-7').innerHTML = out;
 }
 
 document.querySelector('.b-7').onclick = f7;
