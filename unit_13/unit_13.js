@@ -468,7 +468,22 @@ let a19 = {
 }
 
 function f19() {
+    let i19 = document.querySelector('.i-19').value;
 
+    i19 = i19.toLowerCase();
+
+    let out = '';
+
+    for (let key in a19) {
+        for (let i = 0; i < a19[key].length; i++) {
+            if (a19[key][i].toLowerCase() === i19) {
+                out = key;
+                break
+            }
+        }
+    }
+
+    document.querySelector('.out-19').innerHTML = out;
 }
 
 document.querySelector('.b-19').onclick = f19;
