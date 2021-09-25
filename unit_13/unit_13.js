@@ -304,6 +304,7 @@ let a13 = {
 
 function f13() {
     let out = 0;
+
     for (let key in a13) {
         if (typeof a13[key] === 'number') {
             out += a13[key];
@@ -441,9 +442,20 @@ let a18 = {
 }
 
 function f18() {
+    let i18 = document.querySelector('.i-18').value;
 
+    let out = '';
+
+    if ( a18[i18] !== undefined) {
+        for (let i = 0; i < a18[i18].length; i++) {
+            out += `${a18[i18][i]} `;
+        }
+    }
+
+    document.querySelector('.out-18').innerHTML = out;
 }
 
+document.querySelector('.b-18').onclick = f18;
 
 // Task 19
 // При нажатии b-19 выполняете функцию f19. Функция должна в out-19 вывести цвет ветки станции которую пользователь ввел в i-19. Пользователь может вводить текст как с большой, так и с маленькой буквы. Если ветка не найдена - выводите пустую строку.
