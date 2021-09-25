@@ -223,6 +223,13 @@ document.querySelector('.b-9').onclick = f9;
 
 function f10(arr, val) {
 
+    for (let key in arr) {
+        if (arr[key] == val) {
+            return true;
+        }
+    }
+
+    return false;
     //return true;
     //return false;
 }
