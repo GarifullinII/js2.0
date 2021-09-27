@@ -218,7 +218,22 @@ document.querySelector('.b-12').onclick = () => {
 let str13 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
 
 const f13 = () => {
+    let res = {};
 
+    let s13 = new Set(str13);
+
+    for (let elem of s13) {
+
+        let count = 0;
+
+        for (let i = 0; i < str13.length; i++) {
+            if (elem === str13[i]) count++;
+        }
+
+        res[elem] = count;
+    }
+
+    return res;
     // return
 }
 
