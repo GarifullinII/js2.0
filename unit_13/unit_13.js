@@ -81,7 +81,7 @@ function f4() {
     let out = '';
 
     for (let key in a4) {
-        out += `${key} ${a4[key]} <br/>`;
+        out += `${key} ${a4[key]} <br>`;
     }
 
     return out
