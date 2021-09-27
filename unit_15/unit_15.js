@@ -198,7 +198,11 @@ document.querySelector('.b-11').onclick = f11;
 let str12 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
 
 const f12 = () => {
+    let arr = Array.from(str12);
 
+    let setArr = new Set(arr);
+
+    return setArr;
 }
 
 document.querySelector('.b-12').onclick = () => {
