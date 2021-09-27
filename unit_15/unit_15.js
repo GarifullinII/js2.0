@@ -162,7 +162,15 @@ document.querySelector('.b-9').onclick = () => {
 // Task 10
 // При нажатии b-10 выполняете функцию f10. Функция должна принимать набор set в качестве параметра и выводить его в указанный элемент. Элемент указывается как второй параметр функции f10. Вывод значений - через пробел.
 
-const f10 = (out_set, elem) => { }
+const f10 = (out_set, elem) => {
+    let out = '';
+
+    for (let item of out_set) {
+        out += `${item} `;
+    }
+
+    document.querySelector(elem).innerHTML = out;
+}
 
 document.querySelector('.b-10').onclick = () => {
     let a10 = new Set(['4', '5', '6']);
@@ -185,7 +193,7 @@ document.querySelector('.b-11').onclick = f11;
 
 
 // Task 12
-//   При нажатии b-12 выполняете функцию f12. Функция должна преобразовать строку str12 в массив, так, что каждая буква - отдельный элемент массива. Потом создать набор на основе массива и возвратить его.
+// При нажатии b-12 выполняете функцию f12. Функция должна преобразовать строку str12 в массив, так, что каждая буква - отдельный элемент массива. Потом создать набор на основе массива и возвратить его.
 
 let str12 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
 
