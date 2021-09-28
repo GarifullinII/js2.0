@@ -177,7 +177,15 @@ document.querySelector('.b-9').addEventListener('click', ()=>{
 let a10 = [4, 6, 9, 'Hello'];
 
 function f10() {
+    let obj = {};
 
+    for (let key in a10) {
+        let item = a10[key];
+
+        obj[a10[key]] = item;
+    }
+
+    return obj;
 }
 
 document.querySelector('.b-10').addEventListener('click', () => {
