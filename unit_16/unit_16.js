@@ -133,7 +133,17 @@ document.querySelector('.b-7').addEventListener('click', ()=>{
 let a8 = [ { id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
 
 function f8() {
+    let newObj = [];
 
+    for (let i = 0; i < a8.length; i++) {
+        let id = a8[i].id;
+
+        newObj.push(id);
+    }
+
+    a8 = newObj;
+
+    return a8;
 }
 
 document.querySelector('.b-8').addEventListener('click', ()=>{
