@@ -35,6 +35,7 @@ function f2() {
 
 document.querySelector('.b-2').addEventListener('click', f2);
 
+
 // Task 3
 //При нажатии .b-3 выполняете функцию f3. Функция получает div.out-3 со страницы с помощью getElementsByClassName и в каждый записывает число 3, перезаписывая содержимое div.
 
@@ -62,18 +63,29 @@ function f4() {
 
 document.querySelector('.b-4').addEventListener('click', f4);
 
+
 // Task 5
 //При нажатии .b-5 выполняете функцию f5. Функция должна с помощью for of перебрать массив a5 и возвратить новый массив куда входят элементы из a5 большие 7.
 
 let a5 = [3,4,5,2,1,7,8,2,4,6,8,11,23,17];
 
-function f5() {
+let newArr = [];
 
+function f5() {
+    newArr = [];
+
+    for (let item of a5) {
+        if (item > 5) {
+            newArr.push(item);
+        }
+    }
+    return newArr;
 }
 
 document.querySelector('.b-5').addEventListener('click', ()=> {
     document.querySelector('.out-5').innerHTML = f5();
 });
+
 
 // Task 6
 //При нажатии .b-6 выполняете функцию f6. Функция должна превратить массив a6 в одномерный. Результат вывести в out-6 через пробел.
@@ -81,7 +93,11 @@ document.querySelector('.b-5').addEventListener('click', ()=> {
 let a6 = [[1,2], [3,4], [5,6]];
 
 function f6() {
+    let out6 = document.querySelector('.out-6');
 
+    a6 = a6.flat();
+
+    out6.innerHTML = a6.join(' ');
 }
 
 document.querySelector('.b-6').addEventListener('click', f6);
