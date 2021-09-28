@@ -244,7 +244,15 @@ document.querySelector('.b-12').addEventListener('click', f12);
 let a13 = 'testone';
 
 function f13() {
+    let out13 = document.querySelector('.out-13');
 
+    let out = '';
+
+    for (let item of a13) {
+        out += `${item} `;
+    }
+
+    out13.innerHTML = out;
 }
 
 document.querySelector('.b-13').addEventListener('click', f13);
