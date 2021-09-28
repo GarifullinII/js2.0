@@ -156,7 +156,15 @@ document.querySelector('.b-8').addEventListener('click', ()=>{
 let a9 = [ [4,3,2], [2,5], [0,0,0,0,0]];
 
 function f9() {
+    let indexMax = a9[0].length;
 
+    for (let i = 0; i < a9.length; i++) {
+        if (a9[i].length > indexMax) {
+            indexMax = a9[i].length - 1;
+        }
+    }
+
+    return indexMax;
 }
 
 document.querySelector('.b-9').addEventListener('click', ()=>{
