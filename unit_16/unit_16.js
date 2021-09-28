@@ -4,10 +4,18 @@
 let a1 = [5,7,9, 11, 13, 15];
 
 function f1() {
+    let out1 = document.querySelector('.out-1');
 
+    let out = '';
+    for (let i of a1) {
+        out += `${i} `;
+    }
+
+    out1.innerHTML = out;
 }
 
 document.querySelector('.b-1').addEventListener('click', f1);
+
 
 // Task 2
 //При нажатии .b-2 выполняете функцию f2. Функция перебирает массив a2  c помощью цикла for (let i. Выведите на страницу в .out-2 формате индекс+пробел+значение+пробел.
@@ -15,7 +23,14 @@ document.querySelector('.b-1').addEventListener('click', f1);
 let a2 = [5,7,9, 11, 13, 15];
 
 function f2() {
+    let out2 = document.querySelector('.out-2');
 
+    let out = '';
+    for (let i = 0; i < a2.length; i++) {
+        out += `${i} ${a2[i]} `;
+    }
+
+    out2.innerHTML = out;
 }
 
 document.querySelector('.b-2').addEventListener('click', f2);
