@@ -290,7 +290,7 @@ function f15() {
     let out15 = document.querySelectorAll('.out-15');
 
     for (let item of out15) {
-        item.innerHTML = 15;
+        item.innerHTML = '15';
     }
 
 }
