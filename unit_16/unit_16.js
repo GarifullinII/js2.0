@@ -203,7 +203,17 @@ let a11 = {
 }
 
 function f11() {
+    let out11 = document.querySelector('.out-11');
 
+    let out = '';
+
+    for (let key in a11) {
+        if (a11[key] > 10) {
+            out += `${a11[key]} `;
+        }
+    }
+
+    out11.innerHTML = out;
 }
 
 document.querySelector('.b-11').addEventListener('click', f11);
