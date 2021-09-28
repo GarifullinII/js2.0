@@ -108,7 +108,18 @@ document.querySelector('.b-6').addEventListener('click', f6);
 let a7 = [{ id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
 
 function f7() {
+    let newObj = {};
 
+    for (let i = 0; i < a7.length; i++) {
+        let name  = a7[i].name;
+        let id = a7[i].id;
+
+        newObj[id] = name;
+    }
+
+    a7 = newObj;
+
+    return a7;
 }
 
 document.querySelector('.b-7').addEventListener('click', ()=>{
