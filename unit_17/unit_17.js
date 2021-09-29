@@ -35,8 +35,6 @@ document.querySelector('.b-1').onclick = () => {
 
 let a2 = [2, 3, 4, 5, 10, 11, 12];
 
-a2_res = [];
-
 function t2() {
     a2_res = a2.map(elem => {
         return Math.pow(elem, 2);
@@ -55,8 +53,6 @@ document.querySelector('.b-2').onclick = () => {
 
 let a3 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
-a3_res = [];
-
 function t3() {
     a3_res = a3.map(elem => {
         return Number(elem);
@@ -73,8 +69,6 @@ document.querySelector('.b-3').onclick = () => {
 /*  Функция t4 должна с помощью filter отфильтровать массив t4 и создать новый массив a4_res, куда добавить только числа из массива t4.  Функция должна возвращать a4_res. */
 
 let a4 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
-
-a4_res = [];
 
 function t4() {
     a4_res = a4.filter(elem => {
@@ -95,8 +89,6 @@ document.querySelector('.b-4').onclick = () => {
 
 let a5 = [3, 14, 15, 92, '6'];
 
-a5_res = [];
-
 function t5() {
     a5_res = a5.filter((elem) => {
         if (typeof elem === 'number' && elem % 2 === 0) {
@@ -115,8 +107,6 @@ document.querySelector('.b-5').onclick = () => {
 /*  Дан массив a6 = [3, 14, 15, 92, "6", "5", "hello", 32]. C помощью filter переберите массив a6 и создайте массив a6_res, который содержит только числа из a6, которые больше 14. Возвратите a6_res. Действия должны запускаться при вызове функции t6. */
 
 let a6 = [3, 14, 15, 92, "6", "5", "hello", 32];
-
-a6_res = [];
 
 function t6() {
     a6_res = a6.filter(elem => {
@@ -137,8 +127,6 @@ document.querySelector('.b-6').onclick = () => {
 
 let a7 = ['Alto`s Adventure', 'Angry Birds 2', 'Anno 2205', 'Assassin`s Creed Chronicles'];
 
-a7_res = [];
-
 function t7() {
     a7_res = a7.map(elem => {
         return elem.toLowerCase();
@@ -155,8 +143,15 @@ document.querySelector('.b-7').onclick = () => {
 
 let a8 = [3, 14, 15, 92, 7, 32, 59];
 
-function t8() {
+a8_res = [];
 
+function t8() {
+    for (let key in a8) {
+        if (a8[key] % 2 === 0) {
+            a8_res.push(+key);
+        }
+    }
+    return a8_res;
 }
 
 document.querySelector('.b-8').onclick = () => {
