@@ -116,6 +116,8 @@ document.querySelector('.b-5').onclick = () => {
 
 let a6 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
+a6_res = [];
+
 function t6() {
     a6_res = a6.filter(elem => {
         if (typeof elem === 'number' && elem > 14) {
@@ -135,8 +137,13 @@ document.querySelector('.b-6').onclick = () => {
 
 let a7 = ['Alto`s Adventure', 'Angry Birds 2', 'Anno 2205', 'Assassin`s Creed Chronicles'];
 
-function t7() {
+a7_res = [];
 
+function t7() {
+    a7_res = a7.map(elem => {
+        return elem.toLowerCase();
+    });
+    return a7_res;
 }
 
 document.querySelector('.b-7').onclick = () => {
