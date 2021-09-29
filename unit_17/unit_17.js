@@ -138,6 +138,7 @@ document.querySelector('.b-7').onclick = () => {
     console.log(t7());
 }
 
+
 // Task 8 ============================================
 /* Дан массив a8 = [3, 14, 15, 92, 7, 32, 59]. C помощью цикла или метода - решить самостоятельно, переберите массив a8 и добавьте в a8_res индексы четных элементов. Т.е. для данного примера по результату работы функции в a8_res должны быть [1, 3, 5]. Функция должна возвращать a8_res. */
 
@@ -159,20 +160,26 @@ document.querySelector('.b-8').onclick = () => {
 }
 
 
-
 // Task 9 ============================================
 /*  Дан массив a9 = ['Quantum Break', 'Gears of War 4', 'Mass Effect: Andromeda', 'Far Cry Primal']. С помощью forEach, переберите массив a9 и преобразуйте все записи в массиве в нижний регистр. Действия должны запускаться при вызове функции t9. Функция должна возвращать a9. */
 
 let a9 = ['Quantum Break', 'Gears of War 4', 'Mass Effect: Andromeda', 'Far Cry Primal'];
 
 function t9() {
+    let newArr = [];
 
+    a9.forEach(elem => {
+        newArr.push(elem.toLowerCase());
+    });
+
+    a9 = newArr;
+
+    return a9;
 }
 
 document.querySelector('.b-9').onclick = () => {
     console.log(t9());
 }
-
 
 
 // Task 10 ============================================
