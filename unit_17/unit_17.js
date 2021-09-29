@@ -272,8 +272,16 @@ let a14_sym = 'e';
 
 
 function t14() {
+    let newArr = a14.map(elem => {
+        return elem.toLowerCase();
+    })
 
+    let a14_symVal = a14_sym.toLowerCase();
 
+    a14 = newArr;
+    a14_sym = a14_symVal;
+
+    return a14.includes(a14_sym);
 }
 
 document.querySelector('.b-14').onclick = () => {
