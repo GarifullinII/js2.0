@@ -188,8 +188,19 @@ document.querySelector('.b-9').onclick = () => {
 let a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t10() {
+    let newArr = [];
 
+    a10.forEach(elem => {
+        if (elem < 0) {
+            newArr.push(0);
+        } else {
+            newArr.push(elem);
+        }
+    });
 
+    a10 = newArr;
+
+    return a10;
 }
 
 document.querySelector('.b-10').onclick = () => {
