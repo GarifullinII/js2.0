@@ -35,6 +35,8 @@ document.querySelector('.b-1').onclick = () => {
 
 let a2 = [2, 3, 4, 5, 10, 11, 12];
 
+a2_res = [];
+
 function t2() {
     a2_res = a2.map(elem => {
         return Math.pow(elem, 2);
@@ -53,6 +55,8 @@ document.querySelector('.b-2').onclick = () => {
 
 let a3 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
+a3_res = [];
+
 function t3() {
     a3_res = a3.map(elem => {
         return Number(elem);
@@ -70,10 +74,12 @@ document.querySelector('.b-3').onclick = () => {
 
 let a4 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
+a4_res = [];
+
 function t4() {
     a4_res = a4.filter(elem => {
         if(typeof elem === 'number') {
-            return a4_res;
+            return elem;
         }
     });
     return a4_res;
@@ -84,14 +90,20 @@ document.querySelector('.b-4').onclick = () => {
 }
 
 
-
 // Task 5 ============================================
 /*  Дан массив a5 = [3, 14, 15, 92]. C помощью filter переберите массив и создайте a5_res, который содержит только четные числа из a5. Возвратите a5_res. Действия должны запускаться при вызове функции t5. Проверьте, чтобы функция корректно работала со строками, т.е. '6' не должно попасть в результирующий массив.  */
 
 let a5 = [3, 14, 15, 92, '6'];
 
-function t5() {
+a5_res = [];
 
+function t5() {
+    a5_res = a5.filter((elem) => {
+        if (typeof elem === 'number' && elem % 2 === 0) {
+            return elem;
+        }
+    });
+    return a5_res;
 }
 
 document.querySelector('.b-5').onclick = () => {
