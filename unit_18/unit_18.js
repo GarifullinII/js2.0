@@ -18,8 +18,16 @@ document.querySelector('.b-1').onclick = t1;
  создайте новый массив a2_res куда добавьте элементы данного массива деленные на 2. Действия должны
 запускаться при вызове функции t2.*/
 
-function t2() {
+a1 = [2,3,4,5,10,11,12];
 
+function t2() {
+    a1.forEach(elem => {
+        a2_res.push(elem / 2);
+    });
+
+    console.log(a2_res);
+
+    document.querySelector('.out-2').innerHTML = a2_res;
 }
 
 document.querySelector('.b-2').onclick = t2;
