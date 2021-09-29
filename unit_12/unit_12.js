@@ -193,7 +193,7 @@ function f11() {
     for (let i = 0; i < a11.length; i++) {
 
         for (let k = a11[i].length - 1; k >=0; k--) {
-            out += a11[i][k] + '_';
+            out += `${a11[i][k]} `;
         }
     }
 
