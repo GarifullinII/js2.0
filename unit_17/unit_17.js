@@ -111,14 +111,18 @@ document.querySelector('.b-5').onclick = () => {
 }
 
 
-
 // Task 6 ============================================
 /*  Дан массив a6 = [3, 14, 15, 92, "6", "5", "hello", 32]. C помощью filter переберите массив a6 и создайте массив a6_res, который содержит только числа из a6, которые больше 14. Возвратите a6_res. Действия должны запускаться при вызове функции t6. */
 
 let a6 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t6() {
-
+    a6_res = a6.filter(elem => {
+        if (typeof elem === 'number' && elem > 14) {
+            return elem;
+        }
+    });
+    return a6_res;
 }
 
 document.querySelector('.b-6').onclick = () => {
