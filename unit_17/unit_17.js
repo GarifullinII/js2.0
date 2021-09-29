@@ -22,6 +22,7 @@ function t1() {
     a1_res = a1.map(elem => {
         return elem * 2;
     });
+
     return a1_res;
 }
 
@@ -39,6 +40,7 @@ function t2() {
     a2_res = a2.map(elem => {
         return Math.pow(elem, 2);
     });
+
     return a2_res;
 }
 
@@ -57,6 +59,7 @@ function t3() {
     a3_res = a3.map(elem => {
         return Number(elem);
     });
+
     return a3_res;
 }
 
@@ -76,6 +79,7 @@ function t4() {
             return elem;
         }
     });
+
     return a4_res;
 }
 
@@ -95,6 +99,7 @@ function t5() {
             return elem;
         }
     });
+
     return a5_res;
 }
 
@@ -114,6 +119,7 @@ function t6() {
             return elem;
         }
     });
+
     return a6_res;
 }
 
@@ -131,6 +137,7 @@ function t7() {
     a7_res = a7.map(elem => {
         return elem.toLowerCase();
     });
+
     return a7_res;
 }
 
@@ -152,6 +159,7 @@ function t8() {
             a8_res.push(+key);
         }
     }
+
     return a8_res;
 }
 
@@ -207,14 +215,20 @@ document.querySelector('.b-10').onclick = () => {
     console.log(t10());
 }
 
+
 // Task 11 ============================================
 /*  Дан массив a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью filter, переберите массив a11 и создайте новый массив a11_res куда добавьте только те элементы массива ИНДЕКС которых - четный. Возвратите a11_res.*/
 
 let a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t11() {
+    a11_res = a11.filter((elem, index) => {
+        if (index % 2 === 0) {
+            return true;
+        }
+    });
 
-
+    return a11_res;
 }
 
 document.querySelector('.b-11').onclick = () => {
@@ -228,8 +242,7 @@ let a12 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 // a12 = 8; // на этой переменной можно проверить работает или нет ваша функция.
 
 function t12() {
-
-
+    return Array.isArray(a12);
 }
 
 document.querySelector('.b-12').onclick = () => {
