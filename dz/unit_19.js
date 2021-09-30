@@ -3,8 +3,16 @@
 /* Добавьте на блок .div-1 событие клик и по клику запуск функции t1. Функция должна возвращать и выводить на экран содержимое блока (только текст). Вывод осуществляется в out-1.  */
 
 function t1() {
+    let div1 = document.querySelector('.div-1');
+    console.log(div1);
+    let out1 = document.querySelector('.out-1');
+
+    out1.innerHTML = div1.textContent;
+
+    return div1;
 }
 
+document.querySelector('.div-1').onclick = t1;
 // ваше событие здесь!!!
 
 // Task 2 ============================================
