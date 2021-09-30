@@ -27,16 +27,20 @@ function t2(event) {
 document.querySelector('.div-2').onclick = t2;
 // ваше событие здесь!!!
 
-
 // Task 3 ============================================
 /*  Добавьте на блок .div-3 событие клик. При клике - увеличивайте ширину блока на 5px. Каждый клик - увеличение ширины на 5px. 10 кликов - на 50px. Ширину выводите в out-3. */
 
 let w3 = 75;
 
 function t3() {
+    w3 += 5;
 
+    document.querySelector('.div-3').style.width = w3 + 'px';
+
+    document.querySelector('.out-3').innerHTML = w3;
 }
 
+document.querySelector('.div-3').onclick = t3;
 // ваше событие здесь!!!
 
 
