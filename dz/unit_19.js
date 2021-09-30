@@ -4,7 +4,7 @@
 
 function t1() {
     let div1 = document.querySelector('.div-1');
-    console.log(div1);
+
     let out1 = document.querySelector('.out-1');
 
     out1.innerHTML = div1.textContent;
@@ -14,6 +14,7 @@ function t1() {
 
 document.querySelector('.div-1').onclick = t1;
 // ваше событие здесь!!!
+
 
 // Task 2 ============================================
 /*  Добавьте на блок .div-2 событие клик и по клику запуск функции t2. Функция должна возвращать true или false в зависимости от того, нажата ли клавиша alt или нет в момент клика. Также, выводите на экран результат. Вывод осуществляется в out-2. */
@@ -26,6 +27,7 @@ function t2(event) {
 
 document.querySelector('.div-2').onclick = t2;
 // ваше событие здесь!!!
+
 
 // Task 3 ============================================
 /*  Добавьте на блок .div-3 событие клик. При клике - увеличивайте ширину блока на 5px. Каждый клик - увеличение ширины на 5px. 10 кликов - на 50px. Ширину выводите в out-3. */
@@ -48,9 +50,16 @@ document.querySelector('.div-3').onclick = t3;
 /*  Добавьте на блок .div-4 событие двойной клик и по двойному клику запуск функции t4. Функция должна возвращать и выводить на экран содержимое блока (только текст). Вывод осуществляется в out-4. */
 
 function t4() {
+    let div4 = document.querySelector('.div-4');
 
+    let out4 = document.querySelector('.out-4');
+
+    out4.innerHTML = div4.textContent;
+
+    return div4;
 }
 
+document.querySelector('.div-4').ondblclick = t4;
 // ваше событие здесь!!!
 
 // Task 5 ============================================
