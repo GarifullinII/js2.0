@@ -190,9 +190,15 @@ document.querySelector('.b-14').onclick = t14;
 // Task 15 ============================================
 /*  Дан блок .div-15. Добавьте на него событие move. При каждом движении мыши увеличивайте число внутри на 1. */
 
-function t15() {
+let count = 1;
 
+function t15() {
+    count++;
+
+    document.querySelector('.div-15').innerHTML = count + 1;
 }
+
+document.querySelector('.div-15').onmousemove = t15;
 // ваше событие здесь!!!
 
 
