@@ -182,9 +182,9 @@ document.querySelector('.div-13').onmouseup = () =>  {
 /*  Дан блок .div-14. При нажатии кнопки b-14 добавляйте к нему событие onclick - которое, при клике добавляем блоку div-14 класс active. */
 
 function t14() {
-
+    document.querySelector('.div-14').classList.toggle('active');
 }
-document.querySelector('t-14').onclick = t14;
+document.querySelector('.b-14').onclick = t14;
 
 
 // Task 15 ============================================
