@@ -40,16 +40,16 @@ document.querySelector('.i-3').onkeypress = t3;
 // Task 4 ============================================
 /*  Дан input .i-4. Напишите функцию t4, которая выводит в .out-4 только символы в нижнем регистре. Т.е. ввели ab4Bci в out-4 получаем ab4ci. */
 
-let out = '';
+let val4 = '';
 
 function t4(event) {
     let out4 = document.querySelector('.out-4');
 
     if (event.key === event.key.toLowerCase()) {
-        out += event.key;
+        val4 += event.key;
     }
 
-    out4.innerHTML = out;
+    out4.innerHTML = val4;
 
     console.log(event.keyCode);
 }
@@ -59,9 +59,18 @@ document.querySelector('.i-4').onkeypress = t4;
 // Task 5 ============================================
 /*  Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы в верхнем регистре. Т.е. пользователь ввел AbCd и функция выведет ABCD. */
 
-function t5(event) {
-    console.log(event);
+let val5 = '';
 
+function t5(event) {
+    let out5 = document.querySelector('.out-5');
+
+    if (event.key.toLowerCase()) {
+        val5 += event.key.toUpperCase();
+    }
+
+    out5.innerHTML = val5;
+
+    console.log(event);
 }
 
 document.querySelector('.i-5').onkeydown = t5;
