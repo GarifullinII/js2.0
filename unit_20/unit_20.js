@@ -96,8 +96,14 @@ document.querySelector('.i-6').onkeypress= t6;
 
 const a7 = ['a', 'z', 'x', 'w', 'y', 't'];
 
-function t7() {
+function t7(event) {
+    let out7 = document.querySelector('.out-7');
 
+    let val = a7[Math.floor(Math.random()*a7.length)];
+
+    if (event.key) {
+        out7.innerHTML += val;
+    }
 }
 
 document.querySelector('.i-7').onkeydown= t7;
