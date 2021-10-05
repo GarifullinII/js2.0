@@ -25,7 +25,13 @@ document.querySelector('.i-2').onkeypress = t2;
 /*  Дан input .i-3. Напишите функцию t3, которая выводит на страницу true если введен символ и false если цифра. Для определения - используйте keyCode. */
 
 function t3(event) {
+    let out3 = document.querySelector('.out-3');
 
+    if (event.keyCode >= 48 && event.keyCode <=57) {
+        out3.innerHTML = 'true';
+    } else {
+        out3.innerHTML ='false';
+    }
 }
 
 document.querySelector('.i-3').onkeypress = t3;
