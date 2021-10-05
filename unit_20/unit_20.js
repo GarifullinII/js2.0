@@ -117,10 +117,21 @@ const a8 = {
     l : 7
 }
 
+let out = '';
+
 function t8(event) {
     // 1. Получаем из event введенный символ
+    let val = event.key;
+
     // 2. Проверяем наличие такого ключа в a8 - уже делали это раньше!!!!
     // 3. Если есть дописываем в out-8 символ из массива a8. Если нет - введенный символ.
+    if(a8[val] !== undefined) {
+        out += a8[val];
+    } else {
+        out += event.key
+    }
+
+    document.querySelector('.out-8').innerHTML = out;
 }
 
 document.querySelector('.i-8').onkeydown= t8;
