@@ -166,6 +166,17 @@ let w = 75;
 function t10(event) {
     // увеличиваем  h, w, потом присваиваем как свойства...
 
+    h++;
+    w++;
+
+    if (event.keyCode === 38 || event.keyCode === 40) {
+        document.querySelector('.block-10').style.height = h + 'px';
+    }
+
+    if (event.keyCode === 37 || event.keyCode === 39) {
+        document.querySelector('.block-10').style.width = w + 'px';
+    }
+
 }
 
 document.querySelector('.i-10').onkeydown = t10;
