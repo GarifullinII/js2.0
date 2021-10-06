@@ -140,7 +140,17 @@ document.querySelector('.i-8').onkeydown= t8;
 // Task 9 ============================================
 /* Дан input .i-9. Напишите функцию t9, выводит в .out-9 количество (число) нажатых клавиш стрелка вниз. */
 
+let count = 0;
+
 function t9(event) {
+    let out9 = document.querySelector('.out-9');
+
+    if (event.keyCode === 40) {
+        count++;
+    }
+
+    out9.textContent = `${count}`;
+
     console.log(event);
 }
 
