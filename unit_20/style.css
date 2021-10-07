@@ -34,6 +34,9 @@ section {
 .keyboard[data="space"] {
     width: 112px;
 }
+.keyboard[data="Meta"] {
+    width: 120px;
+}
 
 .active {
     background: orange;

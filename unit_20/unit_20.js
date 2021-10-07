@@ -190,9 +190,22 @@ document.querySelector('.i-10').onkeydown = t10;
 5. Самостоятельно добавьте клавишу alt, enter.
 */
 
-function t11(event) {
-    console.log(event.key);
+const keyBoard = document.querySelectorAll('.keyboard');
 
+function t11(event) {
+    for (let i = 0; i < keyBoard.length; i++) {
+        keyBoard[i].classList.remove('active');
+    }
+
+    let key = event.key;
+
+    console.log(key);
+
+    let button = document.querySelector(`.keyboard[data="${key}"]`);
+
+    button.classList.add('active');
+
+    console.log(event.key);
 }
 
 document.querySelector('.i-11').onkeydown = t11;
