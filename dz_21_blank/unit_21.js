@@ -9,6 +9,7 @@ function t1() {
 document.querySelector('.div-1').addEventListener('touchstart', t1);
 // ваше событие здесь!!!
 
+
 // Task 2 ============================================
 /* Создайте блок div-2. Добавьте на него событие touchstart. Выведите в out-2 число срабатываний события. */
 
@@ -41,9 +42,12 @@ document.querySelector('.div-3_2').addEventListener('touchstart', t3);
 /*  Создайте блок div-4. И кнопку b-4. При нажатии кнопки - добавляйте событие ontouchstart на блок div-4. При событии происходит вывод текста touch в out-4.  */
 
 function t4() {
-
+    document.querySelector('.div-4').addEventListener('touchstart', () => {
+        document.querySelector('.out-4').innerHTML += 'touch';
+    });
 }
 
+document.querySelector('.b-4').onclick = t4;
 // ваше событие здесь!!!
 
 // Task 5 ============================================
