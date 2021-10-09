@@ -8,7 +8,7 @@ function t1() {
         let c = a + d;
     }
     // тут catch
-    catch (err) {
+    catch(err) {
         document.querySelector('.out-1').textContent = 1;
     }
     // .. и вывод
@@ -27,7 +27,7 @@ function t2() {
     try {
         document.querySelector('.out-2222222').innerHTML = a * b;
     }
-    catch (err) {
+    catch(err) {
         document.querySelector('.out-2').innerHTML = a * b;
     }
 }
@@ -46,7 +46,7 @@ function t3() {
     try {
         document.querySelector('.out-3').innerHTML = a * b;
     }
-    catch (err) {
+    catch(err) {
         let btn = document.querySelector('.b-3');
 
         btn.insertAdjacentHTML('afterend', '<div class="out-3"></div>');
@@ -66,7 +66,8 @@ let a = [2,3,4];
 function t4() {
     try {
         a.push(7);
-    } catch (err) {
+    }
+    catch(err) {
         a = 0;
     }
 
@@ -80,8 +81,17 @@ document.querySelector('.b-4').onclick = t4;
 // Добавьте try, catch, finnaly так, чтобы в out-5 выводился 0 при ошибки. А в out-5-1 всегда выводилось слово 'finnaly';
 
 function t5() {
-    let p = document.querySelectorAll('p');
-    p.push(3);
+    try {
+        let p = document.querySelectorAll('p');
+        p.push(3);
+    }
+    catch(err) {
+        document.querySelector('.out-5').innerHTML = 0;
+    }
+    finally {
+        document.querySelector('.out-5-1').textContent = 'finally';
+    }
+
 }
 
 document.querySelector('.b-5').onclick = t5;
