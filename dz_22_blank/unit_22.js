@@ -22,8 +22,13 @@ document.querySelector('.b-1').onclick = t1;
 function t2() {
     let a = 4;
     let b = 5;
-    document.querySelector('.out-2222222').innerHTML = a*b;
 
+    try {
+        document.querySelector('.out-2222222').innerHTML = a * b;
+    }
+    catch (err) {
+        document.querySelector('.out-2').innerHTML = a * b;
+    }
 }
 
 document.querySelector('.b-2').onclick = t2;
