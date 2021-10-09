@@ -101,6 +101,7 @@ document.querySelector('.div-8').addEventListener('touchstart', t8);
 /* Дан блок div-9. Добавьте событие ontouch. Выводите количество одновременных касаний в out-9. */
 
 function t9(event) {
+    console.log(event);
     document.querySelector('.out-9').textContent = event.touches.length;
 
     console.log(event.touches.length);
@@ -159,12 +160,45 @@ const prev = document.querySelectorAll('.prev');
 prev.onclick = prevFunction;
 
 function nextFunction() {
+    if (count + 1 < images.length) {
+        count++
+    } else {
+        count = 0;
+    }
+    for (let i = 0; i < images.length; i++) {
+        images[i].classList.remove('active-img');
+    }
 
+    images[count].classList.add('active-img')
+    document.querySelector('.div-12-max img').src = images[count].src;
 }
 
 function prevFunction() {
+    if (count < images.length && count !== 0) {
+        count--;
+    } else {
+        count = 5;
+    }
 
+    for (let i = 0; i < images.length; i++) {
+        images[i].classList.remove('active-img');
+    }
+
+    images[count].classList.add('active-img');
+    document.querySelector('.div-12-max img').src = images[count].src;
 }
 
+function resetFunction() {
+    for(let i = 0; i < images.length; i++) {
+        images[i].classList.remove('active-img');
+    }
 
+    images[0].classList.add('active-img');
+    count = 0;
+    document.querySelector('.img-12-max').src = images[0].src;
+}
+
+document.querySelector('.next').onclick = nextFunction;
+document.querySelector('.prev').onclick = prevFunction;
+document.querySelector('.reset').onclick = resetFunction;
 // ваше событие здесь!!!
