@@ -107,7 +107,9 @@ function t8() {
     if (localStorage.getItem('a7')) {
         a7 = JSON.parse(localStorage.getItem('a7'));
     }
+
     a7.pop();
+
     localStorage.setItem('a7',JSON.stringify(a7));
 }
 
