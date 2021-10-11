@@ -3,8 +3,25 @@
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Выведите в out-1 результат. Запускаться функция должна по нажатию b-1. */
 
 function t1() {
+    // auth = 'DdC33D7d2C2a7';
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction(this.responseText)
+        }
+    }
+
+    xhttp.open('GET', `http://getpost.itgid.info/index2.php?auth=DdC33D7d2C2a7&action=1`, true);
+    xhttp.send();
 }
 
+function myFunction(data) {
+    document.querySelector('.out-1').innerHTML = data;
+}
+
+document.querySelector('.b-1').onclick = t1;
 // ваше событие здесь!!!
 
 // Task 2 ============================================
