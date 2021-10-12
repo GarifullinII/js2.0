@@ -8,7 +8,7 @@ function t1() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            myFunction(this.responseText)
+            myFunction1(this.responseText)
         }
     }
 
@@ -16,7 +16,7 @@ function t1() {
     xhttp.send();
 }
 
-function myFunction(data) {
+function myFunction1(data) {
     document.querySelector('.out-1').innerHTML = data;
 }
 
@@ -32,7 +32,7 @@ function t2() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            myFunction(this.responseText)
+            myFunction2(this.responseText)
         }
     }
 
@@ -40,7 +40,7 @@ function t2() {
     xhttp.send();
 }
 
-function myFunction(data) {
+function myFunction2(data) {
     document.querySelector('.out-2').innerHTML = data;
 }
 
@@ -52,9 +52,23 @@ document.querySelector('.b-2').onclick = t2;
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел.  Выведите в out-3 результат. Запускаться функция должна по нажатию b-3. */
 
 function t3() {
+    let xhttp = new XMLHttpRequest();
 
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction3(this.responseText)
+        }
+    }
+
+    xhttp.open('GET', `http://getpost.itgid.info/index2.php?auth=${auth}&action=3&num1=10&num2=10`, true);
+    xhttp.send();
 }
 
+function myFunction3(data) {
+    document.querySelector('.out-3').innerHTML = data;
+}
+
+document.querySelector('.b-3').onclick = t3;
 // ваше событие здесь!!!
 
 
