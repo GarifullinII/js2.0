@@ -256,7 +256,7 @@ document.querySelector('.b-11').onclick = t11;
 function t12() {
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            myFunction11(this.responseText)
+            myFunction12(this.responseText)
         }
     }
 
@@ -267,7 +267,7 @@ function t12() {
     xhttp.send(`auth=${auth}&action=3&num1=10&num2=100`);
 }
 
-function myFunction11(data) {
+function myFunction12(data) {
     document.querySelector('.out-12').innerHTML = data;
 }
 
@@ -279,10 +279,26 @@ document.querySelector('.b-12').onclick = t12;
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 4. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет случайное число в заданном диапазоне. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-13 результат. Запускаться функция должна по нажатию b-13.*/
 
 function t13() {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction13(this.responseText)
+        }
+    }
 
+    xhttp.open('POST', `http://getpost.itgid.info/index2.php?auth=${auth}&action=4&num1=10&num2=100`, true);
+    
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhttp.send(`auth=${auth}&action=4&num1=10&num2=100`);
 }
 
+function myFunction13(data) {
+    document.querySelector('.out-13').innerHTML = data;
+}
+
+document.querySelector('.b-13').onclick = t13;
 // ваше событие здесь!!!
+
 
 // Task 14 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-14 результат. Запускаться функция должна по нажатию b-14.*/
