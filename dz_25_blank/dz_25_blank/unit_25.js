@@ -95,12 +95,28 @@ function myFunction4(data) {
 document.querySelector('.b-4').onclick = t4;
 // ваше событие здесь!!!
 
+
 // Task 5 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-5 результат. Запускаться функция должна по нажатию b-5. */
 
 function t5() {
+    let xhttp = new XMLHttpRequest();
 
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction5(this.responseText)
+        }
+    }
+
+    xhttp.open('GET', `http://getpost.itgid.info/index2.php?auth=${auth}&action=5`, true);
+    xhttp.send();
 }
+
+function myFunction5(data) {
+    document.querySelector('.out-5').innerHTML = data;
+}
+
+document.querySelector('.b-5').onclick = t5;
 
 // ваше событие здесь!!!
 
