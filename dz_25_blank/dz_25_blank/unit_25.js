@@ -399,12 +399,28 @@ function myFunction17(data) {
 document.querySelector('.b-17').onclick = t17;
 // ваше событие здесь!!!
 
+
 // Task 18 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1. Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-18 результат. Запускаться функция должна по нажатию b-18. */
 
 function t18() {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction18(this.responseText)
+        }
+    }
 
+    xhttp.open('POST', `http://getpost.itgid.info/index2.php?auth=${auth}&action=9&y=1`, true);
+    
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhttp.send(`auth=${auth}&action=9&y=1`);
 }
 
+function myFunction18(data) {
+    document.querySelector('.out-18').innerHTML = data;
+}
+
+document.querySelector('.b-18').onclick = t18;
 // ваше событие здесь!!!
 
