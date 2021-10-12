@@ -229,10 +229,26 @@ document.querySelector('.b-10').onclick = t10;
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-11 результат. Запускаться функция должна по нажатию b-11. */
 
 function t11() {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction11(this.responseText)
+        }
+    }
 
+    xhttp.open('POST', `http://getpost.itgid.info/index2.php?auth=${auth}&action=2&name=Ildar`, true);
+    
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhttp.send(`auth=${auth}&action=2&name=Ildar`);
 }
 
+function myFunction11(data) {
+    document.querySelector('.out-11').innerHTML = data;
+}
+
+document.querySelector('.b-11').onclick = t11;
 // ваше событие здесь!!!
+
 
 // Task 12 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-12 результат. Запускаться функция должна по нажатию b-12.*/
