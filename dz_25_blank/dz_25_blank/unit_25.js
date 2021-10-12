@@ -354,10 +354,26 @@ document.querySelector('.b-15').onclick = t15;
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-16 результат. Запускаться функция должна по нажатию b-16. */
 
 function t16() {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction16(this.responseText)
+        }
+    }
 
+    xhttp.open('POST', `http://getpost.itgid.info/index2.php?auth=${auth}&action=7`, true);
+    
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhttp.send(`auth=${auth}&action=7`);
 }
 
+function myFunction16(data) {
+    document.querySelector('.out-16').innerHTML = data;
+}
+
+document.querySelector('.b-16').onclick = t16;
 // ваше событие здесь!!!
+
 
 // Task 17 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате).Выведите в out-17 результат. Запускаться функция должна по нажатию b-17. */
