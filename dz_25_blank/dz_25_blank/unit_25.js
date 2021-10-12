@@ -324,14 +324,31 @@ function myFunction14(data) {
 document.querySelector('.b-14').onclick = t14;
 // ваше событие здесь!!!
 
+
 // Task 15============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет большее число. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-15 результат. Запускаться функция должна по нажатию b-15. */
 
 function t15() {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction15(this.responseText)
+        }
+    }
 
+    xhttp.open('POST', `http://getpost.itgid.info/index2.php?auth=${auth}&action=6&num1=10&num2=100`, true);
+    
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhttp.send(`auth=${auth}&action=6&num1=10&num2=100`);
 }
 
+function myFunction15(data) {
+    document.querySelector('.out-15').innerHTML = data;
+}
+
+document.querySelector('.b-15').onclick = t15;
 // ваше событие здесь!!!
+
 
 // Task 16 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-16 результат. Запускаться функция должна по нажатию b-16. */
