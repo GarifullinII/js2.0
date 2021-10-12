@@ -117,16 +117,30 @@ function myFunction5(data) {
 }
 
 document.querySelector('.b-5').onclick = t5;
-
 // ваше событие здесь!!!
+
 
 // Task 6 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет большее число. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-6 результат. Запускаться функция должна по нажатию b-6. */
 
 function t6() {
+    let xhttp = new XMLHttpRequest();
 
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction6(this.responseText)
+        }
+    }
+
+    xhttp.open('GET', `http://getpost.itgid.info/index2.php?auth=${auth}&action=6&num1=1&num2=5`, true);
+    xhttp.send();
 }
 
+function myFunction6(data) {
+    document.querySelector('.out-6').innerHTML = data;
+}
+
+document.querySelector('.b-6').onclick = t6;
 // ваше событие здесь!!!
 
 
@@ -134,10 +148,25 @@ function t6() {
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-7 результат. Запускаться функция должна по нажатию b-7. */
 
 function t7() {
+    let xhttp = new XMLHttpRequest();
 
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction7(this.responseText)
+        }
+    }
+
+    xhttp.open('GET', `http://getpost.itgid.info/index2.php?auth=${auth}&action=7`, true);
+    xhttp.send();
 }
 
+function myFunction7(data) {
+    document.querySelector('.out-7').innerHTML = data;
+}
+
+document.querySelector('.b-7').onclick = t7;
 // ваше событие здесь!!!
+
 
 // Task 8 ============================================
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-8 результат. Запускаться функция должна по нажатию b-8.*/
