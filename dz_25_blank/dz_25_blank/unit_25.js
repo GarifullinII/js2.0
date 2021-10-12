@@ -379,9 +379,24 @@ document.querySelector('.b-16').onclick = t16;
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате).Выведите в out-17 результат. Запускаться функция должна по нажатию b-17. */
 
 function t17() {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction17(this.responseText)
+        }
+    }
 
+    xhttp.open('POST', `http://getpost.itgid.info/index2.php?auth=${auth}&action=8&year=1987`, true);
+    
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhttp.send(`auth=${auth}&action=8&year=1987`);
 }
 
+function myFunction17(data) {
+    document.querySelector('.out-17').innerHTML = data;
+}
+
+document.querySelector('.b-17').onclick = t17;
 // ваше событие здесь!!!
 
 // Task 18 ============================================
