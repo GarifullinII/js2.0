@@ -1,10 +1,9 @@
 
 // Task 1 ============================================
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Выведите в out-1 результат. Запускаться функция должна по нажатию b-1. */
+const auth = 'DdC33D7d2C2a7';
 
 function t1() {
-    // auth = 'DdC33D7d2C2a7';
-
     let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
@@ -13,7 +12,7 @@ function t1() {
         }
     }
 
-    xhttp.open('GET', `http://getpost.itgid.info/index2.php?auth=DdC33D7d2C2a7&action=1`, true);
+    xhttp.open('GET', `http://getpost.itgid.info/index2.php?auth=${auth}&action=1`, true);
     xhttp.send();
 }
 
