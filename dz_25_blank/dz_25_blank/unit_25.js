@@ -304,9 +304,24 @@ document.querySelector('.b-13').onclick = t13;
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-14 результат. Запускаться функция должна по нажатию b-14.*/
 
 function t14() {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            myFunction14(this.responseText)
+        }
+    }
 
+    xhttp.open('POST', `http://getpost.itgid.info/index2.php?auth=${auth}&action=5`, true);
+    
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhttp.send(`auth=${auth}&action=5`);
 }
 
+function myFunction14(data) {
+    document.querySelector('.out-14').innerHTML = data;
+}
+
+document.querySelector('.b-14').onclick = t14;
 // ваше событие здесь!!!
 
 // Task 15============================================
