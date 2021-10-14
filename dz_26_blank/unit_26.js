@@ -106,9 +106,16 @@ document.querySelector('.b-6').onclick = t6;
 /*  Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-7 результат. Запускаться функция должна по нажатию b-7. */
 
 function t7() {
-
+	fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=7`, {
+		method:'GET',
+	})
+	.then(response => response.text())
+	.then(response => {
+	document.querySelector('.out-7').innerHTML = response;
+})
 }
 
+document.querySelector('.b-7').onclick = t7;
 // ваше событие здесь!!!
 
 
