@@ -283,9 +283,20 @@ document.querySelector('.b-15').onclick = t15;
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-16 результат. Запускаться функция должна по нажатию b-16. */
 
 function t16() {
-
+	fetch('http://getpost.itgid.info/index2.php', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+	},
+	body: `auth=${auth}&action=7`
+})
+	.then(response => response.text())
+	.then(response => {
+		document.querySelector('.out-16').innerHTML = response;
+	})
 }
 
+document.querySelector('.b-16').onclick = t16;
 // ваше событие здесь!!!
 
 
