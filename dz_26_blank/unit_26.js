@@ -325,7 +325,18 @@ document.querySelector('.b-17').onclick = t17;
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1. Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-18 результат. Запускаться функция должна по нажатию b-18. */
 
 function t18() {
-
+	fetch('http://getpost.itgid.info/index2.php', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+	},
+	body: `auth=${auth}&action=9&y=1`
+})
+	.then(response => response.text())
+	.then(response => {
+		document.querySelector('.out-18').innerHTML = response;
+	})
 }
 
+document.querySelector('.b-18').onclick = t18;
 // ваше событие здесь!!!
