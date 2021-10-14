@@ -140,9 +140,16 @@ document.querySelector('.b-8').onclick = t8;
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1. Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-9 результат. Запускаться функция должна по нажатию b-9. */
 
 function t9() {
-
+	fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=9&d=1`, {
+		method:'GET',
+	})
+	.then(response => response.text())
+	.then(response => {
+	document.querySelector('.out-9').innerHTML = response;
+})
 }
 
+document.querySelector('.b-9').onclick = t9;
 // ваше событие здесь!!!
 
 
