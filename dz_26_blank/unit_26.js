@@ -38,9 +38,16 @@ document.querySelector('.b-2').onclick = t2;
 /*  Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел.  Выведите в out-3 результат. Запускаться функция должна по нажатию b-3. */
 
 function t3() {
-
+	fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=3&num1=1&num2=100`, {
+		method: 'GET',
+	})
+	.then(response => response.text())
+	.then(response => {
+		document.querySelector('.out-3').innerHTML = response;
+	})
 }
 
+document.querySelector('.b-3').onclick = t3;
 // ваше событие здесь!!!
 
 
