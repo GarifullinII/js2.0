@@ -46,10 +46,28 @@ document.querySelector('.b-1').onclick = t1;
 */
 
 function t2() {
+    let one = new Promise((resolve, reject) => {
+        fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=3&num1=1&num2=2`)
+        .then(data => {
+            resolve(data.text());
+        })
+    });
 
+    let two = new Promise((resolve, reject) => {
+        fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=4&num1=10&num2=20`)
+        .then(data => {
+            resolve(data.text());
+        })
+    });
+
+    Promise.all([one, two]).then(value => {
+        document.querySelector('.out-2').innerHTML = value;
+    })
 }
 
+document.querySelector('.b-2').onclick = t2;
 // ваше событие здесь!!!
+
 
 
 // Task 3 ============================================
