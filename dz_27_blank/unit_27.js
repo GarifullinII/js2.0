@@ -1,3 +1,4 @@
+const auth = 'DdC33D7d2C2a7';
 
 // Task 1 ============================================
 /* 
@@ -8,9 +9,28 @@
 */
 
 function t1() {
+    let one = new Promise((resolve, reject) => {
+        fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=1`)
+        .then(data => {
+            resolve(data.text());
+        })
+    });
+
+    let two = new Promise((resolve, reject) => {
+        fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=2`)
+        .then(data => {
+            resolve(data.text());
+        })
+    });
+
+    Promise.all([one, two]).then(value => {
+        document.querySelector('.out-1').innerHTML = value;
+    })
 }
 
+document.querySelector('.b-1').onclick = t1;
 // ваше событие здесь!!!
+
 
 // Task 2 ============================================
 /* 
