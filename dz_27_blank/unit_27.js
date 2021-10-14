@@ -248,6 +248,7 @@ function t7() {
 document.querySelector('.b-7').onclick = t7;
 // ваше событие здесь!!!
 
+
 // Task 8 ============================================
 /* 
 <p> Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7.
@@ -262,8 +263,25 @@ document.querySelector('.b-7').onclick = t7;
 */
 
 function t8() {
+    let one = new Promise((resolve, reject) => {
+        fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=7`)
+        .then(data => {
+            resolve(data.text());
+        })
+    });
 
+    let two = new Promise((resolve, reject) => {
+        fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=8&year=1987`)
+        .then(data => {
+            resolve(data.text());
+        })
+    });
+
+    Promise.all([one, two]).then(value => {
+        document.querySelector('.out-8').innerHTML = value;
+    })
 }
 
+document.querySelector('.b-8').onclick = t8;
 // ваше событие здесь!!!
 
