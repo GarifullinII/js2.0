@@ -119,10 +119,28 @@ document.querySelector('.b-3').onclick = t3;
 */
 
 function t4() {
+    let one = new Promise((resolve, reject) => {
+        fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=7`)
+        .then(data => {
+            resolve(data.text());
+        })
+    });
 
+    let two = new Promise((resolve, reject) => {
+        fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=8&year=1987`)
+        .then(data => {
+            resolve(data.text());
+        })
+    });
+
+    Promise.all([one, two]).then(value => {
+        document.querySelector('.out-4').innerHTML = value;
+    })
 }
 
+document.querySelector('.b-4').onclick = t4;
 // ваше событие здесь!!!
+
 
 // Task 5 ============================================
 /*  
