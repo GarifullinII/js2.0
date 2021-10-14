@@ -216,8 +216,7 @@ document.querySelector('.b-6').onclick = t6;
 
 
 // Task 7 ============================================
-/*  
- <p> Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5.
+/*  <p> Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5.
 Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в
 чате).</p>
 <p>Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6.
