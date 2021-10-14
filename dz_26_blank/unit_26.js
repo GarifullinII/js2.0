@@ -154,14 +154,24 @@ document.querySelector('.b-9').onclick = t9;
 
 
 // Task 10 ============================================
-/*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Если все сделано верно, сервер пришлет строку hello. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-10 результат. Запускаться функция должна по нажатию b-10.
-
-*/
+/*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Если все сделано верно, сервер пришлет строку hello. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-10 результат. Запускаться функция должна по нажатию b-10.*/
 
 function t10() {
-
+	fetch('http://getpost.itgid.info/index2.php', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+	},
+	body: `auth=${auth}&action=1`
+})
+	.then(response => response.text())
+	.then(response => {
+		document.querySelector('.out-10').innerHTML = response;
+	})
 }
 
+document.querySelector('.b-10').onclick = t10;
+// ваше событие здесь!!!
 
 // Task 11 ============================================
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-11 результат. Запускаться функция должна по нажатию b-11. */
@@ -241,4 +251,3 @@ function t18() {
 }
 
 // ваше событие здесь!!!
-
