@@ -215,7 +215,6 @@ document.querySelector('.b-6').onclick = t6;
 // ваше событие здесь!!!
 
 
-
 // Task 7 ============================================
 /*  
  <p> Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5.
@@ -224,14 +223,29 @@ document.querySelector('.b-6').onclick = t6;
 <p>Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6.
 Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет большее число.</p>
 <p>Два запроса объедините с помощью promiseAll.
-Выведите в out-7 результат. Запускаться функция должна по нажатию b-7. </p>
-
-*/
+Выведите в out-7 результат. Запускаться функция должна по нажатию b-7. </p>*/
 
 function t7() {
+    let one = new Promise((resolve, reject) => {
+        fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=5`)
+        .then(data => {
+            resolve(data.text());
+        })
+    });
 
+    let two = new Promise((resolve, reject) => {
+        fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=6&num1=1&num2=10`)
+        .then(data => {
+            resolve(data.text());
+        })
+    });
+
+    Promise.all([one, two]).then(value => {
+        document.querySelector('.out-7').innerHTML = value;
+    })
 }
 
+document.querySelector('.b-7').onclick = t7;
 // ваше событие здесь!!!
 
 // Task 8 ============================================
