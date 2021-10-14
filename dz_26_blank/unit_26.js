@@ -72,9 +72,16 @@ document.querySelector('.b-4').onclick = t4;
 /*  Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-5 результат. Запускаться функция должна по нажатию b-5. */
 
 function t5() {
-
+	fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=5`, {
+	method:'GET',
+})
+.then(response => response.text())
+.then(response => {
+	document.querySelector('.out-5').innerHTML = response;
+})
 }
 
+document.querySelector('.b-5').onclick = t5;
 // ваше событие здесь!!!
 
 
