@@ -21,9 +21,16 @@ document.querySelector('.b-1').onclick = t1;
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Выведите в out-2 результат. Запускаться функция должна по нажатию b-2. */
 
 function t2() {
-
+	fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=2&name=Ildar`, {
+		method: 'GET',
+	})
+	.then(response => response.text())
+	.then(response => {
+		document.querySelector('.out-2').innerHTML = response;
+	})
 }
 
+document.querySelector('.b-2').onclick = t2;
 // ваше событие здесь!!!
 
 
