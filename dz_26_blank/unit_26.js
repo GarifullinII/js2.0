@@ -220,9 +220,20 @@ document.querySelector('.b-12').onclick = t12;
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 4. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет случайное число в заданном диапазоне. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-13 результат. Запускаться функция должна по нажатию b-13.*/
 
 function t13() {
-
+	fetch('http://getpost.itgid.info/index2.php', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+	},
+	body: `auth=${auth}&action=4&num1=2&num2=8`
+})
+	.then(response => response.text())
+	.then(response => {
+		document.querySelector('.out-13').innerHTML = response;
+	})
 }
 
+document.querySelector('.b-13').onclick = t13;
 // ваше событие здесь!!!
 
 
