@@ -199,9 +199,20 @@ document.querySelector('.b-11').onclick = t11;
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-12 результат. Запускаться функция должна по нажатию b-12.*/
 
 function t12() {
-
+	fetch('http://getpost.itgid.info/index2.php', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+	},
+	body: `auth=${auth}&action=3&num1=2&num2=8`
+})
+	.then(response => response.text())
+	.then(response => {
+		document.querySelector('.out-12').innerHTML = response;
+	})
 }
 
+document.querySelector('.b-12').onclick = t12;
 // ваше событие здесь!!!
 
 
