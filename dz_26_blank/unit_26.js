@@ -123,9 +123,16 @@ document.querySelector('.b-7').onclick = t7;
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-8 результат. Запускаться функция должна по нажатию b-8.*/
 
 function t8() {
-
+	fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=8&year=1987`, {
+		method:'GET',
+	})
+	.then(response => response.text())
+	.then(response => {
+	document.querySelector('.out-8').innerHTML = response;
+})
 }
 
+document.querySelector('.b-8').onclick = t8;
 // ваше событие здесь!!!
 
 
