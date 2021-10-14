@@ -1,8 +1,16 @@
+const auth = 'DdC33D7d2C2a7';
+
 // Task 1 ============================================
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Выведите в out-1 результат. Запускаться функция должна по нажатию b-1. */
 
 function t1() {
-
+	fetch(`http://getpost.itgid.info/index2.php?auth=${auth}&action=1`, {
+		method: 'GET',
+	})
+	.then(response => response.text())
+	.then(response => {
+		document.querySelector('.out-1').innerHTML = response;
+	})
 }
 
 document.querySelector('.b-1').onclick = t1;
